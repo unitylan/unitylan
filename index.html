@@ -48,7 +48,7 @@
                 <div class="border-l-2 border-white h-6 mx-4"></div>
 
                 <li class="ml-auto pl-12">
-                    <a href="contact.html" class="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition">Contact</a>
+                    <a href="contact.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-600 transition">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -56,11 +56,11 @@
 </header>
 
 <!-- Drawer Menu for Smaller Devices -->
-<div id="drawer" class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50 z-40 hidden">
-    <div class="flex justify-end p-4">
-        <button id="close-drawer" class="text-white text-3xl">×</button>
+<div id="drawer" class="fixed top-0 left-0 w-[80vw] h-screen bg-black bg-opacity-70 z-40 hidden transition-all duration-300">
+    <div class="flex justify-end p-6">
+        <button id="close-drawer" class="text-white text-4xl">×</button>
     </div>
-    <div class="flex justify-center items-center h-full">
+    <div class="flex justify-end items-center h-full pr-6">
         <nav>
             <ul class="space-y-4 font-semibold text-white text-xl">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -93,7 +93,7 @@
 </div>
 
 <!-- Mobile Drawer Toggle -->
-<button id="open-drawer" class="lg:hidden text-white text-3xl absolute top-4 right-4 z-50">☰</button>
+<button id="open-drawer" class="lg:hidden text-white text-4xl absolute top-4 right-4 z-50">☰</button>
 
 <!-- JavaScript for Drawer Toggle and Dropdown in Mobile -->
 <script>
@@ -106,10 +106,12 @@
     // Open drawer
     openDrawerButton.addEventListener('click', () => {
         drawer.classList.remove('hidden');
+        drawer.classList.add('block');
     });
 
     // Close drawer
     closeDrawerButton.addEventListener('click', () => {
+        drawer.classList.remove('block');
         drawer.classList.add('hidden');
     });
 
