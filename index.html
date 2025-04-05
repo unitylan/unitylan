@@ -26,8 +26,8 @@
         </a>
         
         <!-- Mobile Drawer Button (Increased size) -->
-        <button id="mobile-menu-toggle" class="lg:hidden text-white p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <button id="mobile-menu-toggle" class="lg:hidden text-white p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
@@ -74,10 +74,16 @@
             <ul class="space-y-6 font-semibold text-black">
                 <li><a href="index.html" class="block">Home</a></li>
                 
-                <!-- Services with Subheadings in Drawer -->
+                <!-- Services Accordion with Subheadings -->
                 <li class="relative">
-                    <a href="#" class="block">Services</a>
-                    <ul class="space-y-4 mt-4">
+                    <div class="flex items-center justify-between cursor-pointer" id="services-heading">
+                        <a href="#" class="block">Services</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </div>
+                    <!-- Service subheadings (hidden by default) -->
+                    <ul id="services-subheadings" class="accordion-content hidden space-y-2 pl-4 mt-2">
                         <li><a href="services.html" class="block">Web Development</a></li>
                         <li><a href="ecommerce.html" class="block">E-commerce</a></li>
                         <li><a href="Consulting.html" class="block">Consulting</a></li>
@@ -105,6 +111,23 @@
 
     mobileMenuClose.addEventListener("click", () => {
         mobileMenu.style.transform = "translateX(100%)";
+    });
+
+    // Accordion functionality for Services in Drawer
+    const servicesHeading = document.getElementById("services-heading");
+    const servicesSubheadings = document.getElementById("services-subheadings");
+    const servicesIcon = servicesHeading.querySelector("svg");
+
+    servicesHeading.addEventListener('click', () => {
+        // Toggle the visibility of the subheadings
+        servicesSubheadings.classList.toggle('hidden');
+
+        // Toggle the arrow direction
+        if (servicesSubheadings.classList.contains('hidden')) {
+            servicesIcon.style.transform = "rotate(0deg)"; // Point down
+        } else {
+            servicesIcon.style.transform = "rotate(180deg)"; // Point up
+        }
     });
 </script>
 
