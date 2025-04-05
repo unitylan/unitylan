@@ -131,7 +131,7 @@
     /* Mobile Styles */
     @media (max-width: 768px) {
         #site-header {
-            position: fixed; /* Ensure header is sticky on mobile */
+            position: static; /* Remove sticky positioning for mobile */
         }
 
         .nav-link {
@@ -171,6 +171,19 @@
             top: 0; /* Align it to the top of the screen */
             left: 0;
             z-index: 40;
+            width: 80vw; /* Match the drawer width to the logo */
+            height: 100vh; /* Full screen height */
+        }
+
+        /* Align drawer content with the logo */
+        #drawer .flex {
+            align-items: flex-start; /* Align drawer content at the top */
+            padding-right: 20px;
+        }
+
+        /* Adjust logo size for mobile */
+        #logo {
+            width: 150px; /* Adjust the logo size to match drawer size */
         }
     }
 
@@ -182,11 +195,6 @@
 
         .border-l-2 {
             display: none; /* Hide vertical line for mobile */
-        }
-
-        /* Adjust logo size */
-        #logo {
-            width: 150px; /* Adjust the logo size to match drawer size */
         }
     }
 </style>
