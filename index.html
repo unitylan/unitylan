@@ -18,11 +18,11 @@
     <body class="bg-gray-100">
 
 <!-- Header -->
-<header id="site-header" class="fixed top-0 left-0 w-full h-[120px] flex items-center z-50 transition-all duration-300 bg-transparent">
+<header id="site-header" class="top-0 left-0 w-full h-[120px] flex items-center z-50 transition-all duration-300 bg-transparent">
     <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4">
         <!-- Business Logo -->
         <a href="index.html" class="h-full flex items-center">
-            <img id="logo" src="images/logo2.png" alt="Business Logo" class="w-[270px] max-h-full object-contain">
+            <img id="logo" src="images/logo2.png" alt="Business Logo" class="w-[180px] max-h-full object-contain"> <!-- Adjusted the width to fit better -->
         </a>
         <nav>
             <ul class="flex space-x-6 font-semibold items-center">
@@ -123,17 +123,25 @@
 
 <!-- Responsive Styles -->
 <style>
-    /* Tablet and smaller devices */
+    /* General Header Styling for larger devices */
+    #site-header {
+        position: fixed; /* Keep the header fixed on large screens */
+    }
+
+    /* Mobile Styles */
     @media (max-width: 768px) {
         #site-header {
-            padding: 0 10px;
+            position: static; /* Remove the sticky (fixed) positioning on mobile */
         }
+
         .nav-link {
             font-size: 1rem;
         }
+
         .ml-auto {
             margin-left: 0;
         }
+
         .pl-12 {
             padding-left: 0;
         }
@@ -163,8 +171,14 @@
         .nav-link {
             font-size: 0.875rem;
         }
+
         .border-l-2 {
             display: none; /* Hide vertical line for mobile */
+        }
+
+        /* Adjust logo size */
+        #logo {
+            width: 150px; /* Adjust the logo size to match drawer size */
         }
     }
 </style>
