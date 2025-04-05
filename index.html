@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - IT Solutions</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <!-- Font Awesome for Icons -->
+        <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
+        <link rel="stylesheet" href="styles.css">
+      
+    </head>
+    <body class="bg-gray-100">
+
+    <!-- Header -->
+    <header id="site-header" class="fixed top-0 left-0 w-full h-[120px] flex items-center z-50 transition-all duration-300 bg-transparent">
+        <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4">
+            <!-- Business Logo -->
+            <a href="index.html" class="h-full flex items-center">
+                <img id="logo" src="_images/logo2.png" alt="Business Logo" class="w-[270px] max-h-full object-contain">
+            </a>
+            <nav>
+                <ul class="flex space-x-6 font-semibold items-center">
+                    <li><a href="index.html" class="text-white nav-link">Home</a></li>
+                    <li class="relative group">
+                        <!-- Service Dropdown Menu -->
+                        <a href="#" class="text-white nav-link">Services</a>
+                        <ul class="absolute left-0 hidden mt-2 bg-white text-black shadow-lg rounded-lg w-48 space-y-2 py-2 z-10 group-hover:block">
+                            <li><a href="services.html" class="block px-4 py-2 dropdown-link transition">Web Development</a></li>
+                            <li><a href="ecommerce.html" class="block px-4 py-2 dropdown-link transition">E-commerce</a></li>
+                            <li><a href="Consulting.html" class="block px-4 py-2 dropdown-link transition">Consulting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="portfolio.html" class="text-white nav-link">Portfolio</a></li>
+                    <li><a href="about.html" class="text-white nav-link">About Us</a></li>
+                    <li class="ml-auto pl-12">
+                        <a href="contact.html" class="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center h-[600px] flex items-center" style="background-image: url('images/chip8.jpeg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Dark Overlay -->
+
+    <div class="relative z-10 ml-6 md:ml-12 text-white max-w-lg md:max-w-xl">
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-snug mb-4">Innovative IT Solutions</h1>
+        <p class="text-base md:text-lg mt-3 mb-6">We build next-gen websites and IT services tailored to your business needs, ensuring excellence every step of the way.</p>
+        <a href="#"
+          class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400">
+          Get Started
+          <!-- Right Arrow Icon -->
+          <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+    </div>
+</section>
+   
+        <!-- Services Section -->
+        <section id="products" class="p-10 text-center">
+                <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
+                <div class="mt-6">
+                    <div class="flex justify-center mt-6 bg-blue-300 rounded-full p-1 w-fit mx-auto">
+                        <button id="services-btn" class="tab-button px-6 py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('services', event)">Web Development</button>
+                        <button id="ecommerce-btn" class="tab-button px-6 py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('ecommerce', event)">E-Commerce</button>
+                        <button id="itconsulting-btn" class="tab-button px-6 py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('itconsulting', event)">Consulting</button>
+                    </div>
+                    
+                    <div id="services" class="tab-content mt-6 hidden overflow-hidden relative">
+                        <div class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
+                            <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
+                                <h3 class="text-xl font-semibold">Web Development</h3>
+                                <p class="text-gray-600 mt-2">We build and maintain websites and web applications, focusing on both front-end design and back-end functionality to provide a seamless, responsive, and user-friendly online experience.</p>
+                                <a href="services.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/web.jpeg');">
+                                <h3 class="text-xl font-semibold">Website Development</h3>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/ui.jpeg');">
+                                <h3 class="text-xl font-semibold">UI Design & reDesign</h3>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/old.jpeg');">
+                                <h3 class="text-xl font-semibold">SEO & Marketing</h3>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/sup.webp');">
+                                <h3 class="text-xl font-semibold">Support & Maintenance</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="ecommerce" class="tab-content mt-6 hidden overflow-hidden relative">
+                        <div class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
+                            <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
+                                <h3 class="text-xl font-semibold">E-Commerce</h3>
+                                <p class="text-gray-600 mt-2">We create online stores, integrating secure payment gateways and managing product inventories to provide businesses with a robust, scalable platform for selling products and services online.</p>
+                                <a href="ecommerce.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/ecom.jpeg');">
+                                <h3 class="text-xl font-semibold">Online Store Setup</h3>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/paymentgate.webp');">
+                                <h3 class="text-xl font-semibold">Payment Gateway Integration</h3>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/product.webp');">
+                                <h3 class="text-xl font-semibold">Product Configuration</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="itconsulting" class="tab-content mt-6 hidden overflow-hidden relative">
+                        <div class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
+                            <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
+                                <h3 class="text-xl font-semibold">Consulting</h3>
+                                <p class="text-gray-600 mt-2">We help businesses assess and implement technology solutions that enhance efficiency, security, and scalability, offering expert guidance on IT strategy, systems integration, and technology adoption.</p>
+                                <a href="consulting.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/marketing.webp');">
+                                <h3 class="text-xl font-semibold">Data Analytics</h3>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/customdesign.webp');">
+                                <h3 class="text-xl font-semibold">Systems Integration</h3>
+                            </div>
+                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/cloud.jpeg');">
+                                <h3 class="text-xl font-semibold">Security & Risk Management</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    
+<!-- Infographic-Style Timeline -->
+<section class="p-10 bg-gray-100 relative overflow-hidden">
+    <h2 class="text-3xl font-bold text-gray-800 text-center">Your Product Journey</h2>
+    <p class="text-gray-600 text-center mt-3 text-sm">
+        From initial consultation to final delivery, here’s how we bring your project to life.
+    </p>
+    
+    <div class="mt-12 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 relative">
+        <!-- Step 1 -->
+        <div class="flex items-center gap-6 animate-fadeIn">
+            <div class="w-16 h-16 bg-blue-500 text-white flex items-center justify-center text-2xl font-bold rounded-full shadow-lg">
+                1
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800">Consultation & Planning</h3>
+                <p class="text-gray-600 text-sm mt-1">We discuss your vision, goals, and requirements to create a strategic roadmap.</p>
+            </div>
+            <img src="images/service6.avif" alt="Consultation" class="w-24 md:w-32">
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="flex items-center gap-6 animate-fadeIn delay-200">
+            <div class="w-16 h-16 bg-blue-500 text-white flex items-center justify-center text-2xl font-bold rounded-full shadow-lg">
+                2
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800">Design & Prototyping</h3>
+                <p class="text-gray-600 text-sm mt-1">We create wireframes and prototypes to visualize the final product.</p>
+            </div>
+            <img src="images/service2.avif" alt="Design" class="w-16 md:w-28">
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="flex items-center gap-6 animate-fadeIn delay-400">
+            <div class="w-16 h-16 bg-blue-500 text-white flex items-center justify-center text-2xl font-bold rounded-full shadow-lg">
+                3
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800">Development & Testing</h3>
+                <p class="text-gray-600 text-sm mt-1">Our team codes, integrates features, and rigorously tests the product.</p>
+            </div>
+            <img src="images/service4.avif" alt="Development" class="w-16 md:w-28">
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="flex items-center gap-6 animate-fadeIn delay-600">
+            <div class="w-16 h-16 bg-blue-500 text-white flex items-center justify-center text-2xl font-bold rounded-full shadow-lg">
+                4
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800">Deployment & Launch</h3>
+                <p class="text-gray-600 text-sm mt-1">We deploy the product, ensuring seamless integration and optimal performance.</p>
+            </div>
+            <img src="images/service5.avif" alt="Launch" class="w-16 md:w-28">
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="flex items-center gap-6 animate-fadeIn delay-800">
+            <div class="w-16 h-16 bg-blue-500 text-white flex items-center justify-center text-2xl font-bold rounded-full shadow-lg">
+                5
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800">Maintenance & Support</h3>
+                <p class="text-gray-600 text-sm mt-1">We provide ongoing maintenance and support to keep everything running smoothly.</p>
+            </div>
+            <img src="images/service7.avif" alt="Support" class="w-16 md:w-28">
+        </div>
+    </div>
+</section>
+
+<!-- Section Separator with Tech-Inspired Spaced-Out Hexagonal Background -->
+<section class="relative py-16 px-6 bg-white text-gray-900">
+    <!-- SVG Background -->
+    <div class="absolute inset-0 w-full h-full opacity-20">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <defs>
+                <pattern id="hexPattern" width="100" height="86" patternUnits="userSpaceOnUse"
+                    patternTransform="translate(50,0)">
+                    <polygon points="50,0 100,25 100,61 50,86 0,61 0,25" fill="none" stroke="black" stroke-width="1" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#hexPattern)" />
+        </svg>
+    </div>
+
+    <!-- Centered Container with Border -->
+    <div class="relative max-w-6xl mx-auto border-t-2 border-b-2 border-gray-400 px-4">
+        <div class="flex justify-between items-center">
+            <!-- Left-Aligned Content -->
+            <div class="flex-1">
+                <h2 class="text-3xl font-semibold text-gray-800">Discover what we can do for you</h2>
+                <p class="text-lg text-gray-700 mt-2">Driven by a passion for innovation, our team is committed to providing our clients with the most innovative and powerful development solutions in the industry.</p>
+            </div>
+
+            <!-- Right-Aligned Button -->
+            <div>
+                <a href="contact.html"
+                    class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300">
+                    Reach Out
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Portfolio Section -->
+    <section  id="portfolio" class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <!-- Heading and Browse All Button Row -->
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800">Portfolio</h2>
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors">
+                    Browse All
+                    <!-- Right Arrow Icon -->
+                    <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+                <!-- Bento Grid Layout with 3 Items -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Portfolio Item 1 (Light Theme) -->
+        <div class="relative overflow-hidden rounded-lg shadow-lg bg-white col-span-1 hover:scale-105 transition-transform duration-300">
+            <img src="images/chip.webp" alt="Portfolio Item 1" class="w-full h-56 object-cover rounded-lg">
+            <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+            <p class="absolute bottom-4 left-4 text-white text-lg font-semibold">Project 1</p>
+        </div>
+
+        <!-- Portfolio Item 2 (Dark Theme) -->
+        <div class="relative overflow-hidden rounded-lg shadow-lg bg-gray-800 col-span-1 hover:scale-105 transition-transform duration-300">
+            <img src="images/cloud.jpeg" alt="Portfolio Item 2" class="w-full h-56 object-cover rounded-lg">
+            <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+            <p class="absolute bottom-4 left-4 text-white text-lg font-semibold">Project 2</p>
+        </div>
+
+        <!-- Portfolio Item 3 (Light Theme) -->
+        <div class="relative overflow-hidden rounded-lg shadow-lg bg-white col-span-1 hover:scale-105 transition-transform duration-300">
+            <img src="images/chip7.webp" alt="Portfolio Item 3" class="w-full h-56 object-cover rounded-lg">
+            <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+            <p class="absolute bottom-4 left-4 text-white text-lg font-semibold">Project 3</p>
+        </div>
+    </div>
+        </div>
+    </section>
+
+<!-- Industries -->
+<!-- 
+<section id="industries" class="p-10 bg-white relative overflow-hidden">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-left">Industries</h2>
+    <!-- Scrollable Flex Layout for the carousel holding all industry items 
+    <div class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide" id="industries-carousel">
+        
+        <!-- First Industry Item: Agriculture 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/farm2.jpeg')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Agriculture</h3>
+        </div>
+
+        <!-- Second Industry Item: Entertainment 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/ent.webp')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Entertainment</h3>
+        </div>
+
+        <!-- Third Industry Item: Transportation 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/transport.jpeg')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Transportation</h3>
+        </div>
+
+        <!-- Fourth Industry Item: Mining 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/mine.jpeg')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Mining</h3>
+        </div>
+
+        <!-- Fifth Industry Item: Finance 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/fintech.jpeg')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Finance</h3>
+        </div>
+
+        <!-- Sixth Industry Item: Construction 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/contruct.jpeg')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Construction</h3>
+        </div>
+
+        <!-- Seventh Industry Item: Retail 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/retail.avif')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Retail</h3>
+        </div>
+
+        <!-- Eighth Industry Item: Media 
+        <div class="relative bg-cover bg-center rounded-lg min-w-[300px] h-64 snap-center" style="background-image: url('_images/personal.webp')">
+            <h3 class="absolute bottom-2 left-2 text-gray-800 text-lg font-bold bg-white p-2 rounded">Media</h3>
+        </div>
+
+    </div> <!-- End of Scrollable Flex Layout 
+
+</section> 
+-->
+
+<!-- Industry Section -->
+<section class="py-12">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Industries We Serve</h2>
+
+        <!-- Logo Cloud Wrapper (overflow-hidden to make logos always visible) -->
+        <div class="overflow-container">
+            <div class="logo-cloud">
+                <!-- Create a logo wrapper to avoid cut-off logos and create even spacing -->
+                <div class="logo-wrapper">
+                    <!-- Agriculture -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Agriculture</h3>
+                    </div>
+
+                    <!-- Entertainment -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Entertainment</h3>
+                    </div>
+
+                    <!-- Transportation -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Transportation</h3>
+                    </div>
+
+                    <!-- Mining -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-diamond"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Mining</h3>
+                    </div>
+
+                    <!-- Finance -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Finance</h3>
+                    </div>
+
+                    <!-- Construction -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Construction</h3>
+                    </div>
+
+                    <!-- Retail -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-cart-shopping"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Retail</h3>
+                    </div>
+                </div>
+
+                <!-- Duplicate the content to create an infinite loop -->
+                <div class="logo-wrapper">
+                    <!-- Agriculture -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Agriculture</h3>
+                    </div>
+
+                    <!-- Entertainment -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Entertainment</h3>
+                    </div>
+
+                    <!-- Transportation -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Transportation</h3>
+                    </div>
+
+                    <!-- Mining -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-diamond"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Mining</h3>
+                    </div>
+
+                    <!-- Finance -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Finance</h3>
+                    </div>
+
+                    <!-- Construction -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Construction</h3>
+                    </div>
+
+                    <!-- Retail -->
+                    <div class="logo-container">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-cart-shopping"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">Retail</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="cta-section">
+    <div class="cta-container">
+        <div class="cta-text">
+            <h2 class="cta-headline">Unlock the Full Experience</h2>
+            <p class="cta-description">Take your workflow to the next level with exclusive features and benefits. Get started today!</p>
+        </div>
+        <div class="cta-buttons">
+            <a href="#" class="cta-btn cta-btn-primary">Get Pro Version</a>
+            <a href="#" class="cta-btn cta-btn-secondary">Start Free Trial</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-800 p-10 mt-0">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <!-- Company Info -->
+        <div class="flex flex-col items-center md:items-start">
+            <img src="_images/logo2.png" alt="IT Solutions Logo" class="w-[200px] max-h-full object-contain">
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-lg font-semibold">Company</h3>
+            <ul class="text-sm text-gray-600 space-y-2 mt-3">
+                <li><a href="about.html" class="hover:text-gray-900">About Us</a></li>
+                <li><a href="portfolio.html" class="hover:text-gray-900">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:text-gray-900">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+            <h3 class="text-lg font-semibold">Services</h3>
+            <ul class="text-sm text-gray-600 space-y-2 mt-3">
+                <li><a href="services.html" class="hover:text-gray-900">Web Development</a></li>
+                <li><a href="ecommerce.html" class="hover:text-gray-900">E-commerce</a></li>
+                <li><a href="Consulting.html" class="hover:text-gray-900">IT Consulting</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <p class="text-sm text-gray-600 mt-3">Email: support@itsolutions.com</p>
+            <p class="text-sm text-gray-600">Phone: +1 (123) 456-7890</p>
+            <a href="mailto:support@itsolutions.com" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                Email Us
+            </a>
+
+            <!-- Social Media Links -->
+            <div class="mt-4">
+                <h3 class="text-lg font-semibold">Follow Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4 mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2h2v-1.5c0-2 1.2-3 3-3 .9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 2h-1.9v7A10 10 0 0 0 22 12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M8 19c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7zm-1-10h2v6H7v-6zm1-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9 12h-2v-3c0-2-1-2-1-2s-1 0-1 2v3h-2v-6h2v1s1-1 3-1 3 1 3 4v3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M19 3h-3a5 5 0 0 0-5 5v3H8v4h3v8h4v-8h3l1-4h-4V8c0-1 0-2 2-2h2V3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-sm text-gray-600 border-t border-gray-300 mt-6 pt-4">
+        &copy; 2025 UnityLan. All rights reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

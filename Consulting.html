@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - IT Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+<!-- Header -->
+<header id="site-header" class="fixed top-0 left-0 w-full h-[120px] flex items-center z-50 transition-all duration-300 bg-transparent">
+    <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4">
+        <!-- Business Logo -->
+        <a href="index.html" class="h-full flex items-center">
+            <img id="logo" src="_images/logo2.png" alt="Business Logo" class="w-[270px] max-h-full object-contain">
+        </a>
+
+        <!-- Navigation -->
+        <nav>
+            <ul class="flex space-x-6 font-semibold items-center">
+                <li><a href="index.html" class="text-white nav-link">Home</a></li>
+                <li class="relative group">
+                    <!-- Service Dropdown Menu -->
+                    <a href="#" class="text-white nav-link">Services</a>
+                    <ul class="absolute left-0 hidden mt-2 bg-white text-black shadow-lg rounded-lg w-48 space-y-2 py-2 z-10 group-hover:block">
+                        <li><a href="services.html" class="block px-4 py-2 dropdown-link transition">Web Development</a></li>
+                        <li><a href="ecommerce.html" class="block px-4 py-2 dropdown-link transition">E-commerce</a></li>
+                        <li><a href="Consulting.html" class="block px-4 py-2 dropdown-link transition">Consulting</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html" class="text-white nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="text-white nav-link">About Us</a></li>
+                <li class="ml-auto pl-12">
+                    <a href="contact.html" class="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center h-[450px] flex items-end justify-center" style="background-image: url('images/chip7.webp');">
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  
+    <div class="relative z-10 text-white text-center px-6 md:px-12 pb-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Innovative IT Solutions</h1>
+        <p class="text-lg md:text-xl mb-6 max-w-3xl mx-auto">We build next-gen websites and IT services tailored to your business needs, ensuring excellence at every step.</p>
+        <a href="#"
+          class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400">
+          Browse All
+          <!-- Right Arrow Icon -->
+          <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+    </div>
+</section>
+
+<!-- Consulting Services -->
+<section class="max-w-6xl mx-auto my-16 px-6">
+    <h2 class="text-3xl font-semibold text-center">Consulting Services</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <!-- Strategy -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold">IT Strategy</h3>
+            <p class="mt-2">We align your IT infrastructure with business goals, ensuring that your technology investments yield long-term success and growth. We work closely with your team to understand your needs and formulate actionable plans.</p>
+        </div>
+        <!-- Architecture -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold">Enterprise Architecture</h3>
+            <p class="mt-2">Our consultants will design a scalable and secure architecture for your business that aligns with both current and future needs. We help you choose the right technologies and frameworks to optimize performance and reduce complexity.</p>
+        </div>
+        <!-- ERP -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold">Enterprise Resource Planning</h3>
+            <p class="mt-2">We offer expert advice on selecting, implementing, and managing solutions to streamline your business operations. Our services ensure that your system integrates seamlessly with your workflow and improves decision-making across departments.</p>
+        </div>
+        <!-- Integration -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold">Systems Integration</h3>
+            <p class="mt-2">We help your organization integrate disparate systems into a cohesive, efficient network. Our solutions ensure that your IT systems work together seamlessly, reducing costs and boosting productivity.</p>
+        </div>
+        <!-- Data Analytics -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold">Data Analytics</h3>
+            <p class="mt-2">With our data analytics services, we help you leverage the power of data to make informed decisions. We offer customized dashboards and insights to help your business unlock its full potential by using the right metrics.</p>
+        </div>
+        <!-- Security -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold">Security & Risk Management</h3>
+            <p class="mt-2">Our consultants assist you in protecting your business from cyber threats by implementing effective security measures. We provide risk assessment, compliance management, and ongoing monitoring to safeguard your IT infrastructure.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="cta-section">
+    <div class="cta-container">
+        <div class="cta-text">
+            <h2 class="cta-headline">Unlock the Full Experience</h2>
+            <p class="cta-description">Take your workflow to the next level with exclusive features and benefits. Get started today!</p>
+        </div>
+        <div class="cta-buttons">
+            <a href="#" class="cta-btn cta-btn-primary">Get Pro Version</a>
+            <a href="#" class="cta-btn cta-btn-secondary">Start Free Trial</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-800 p-10 mt-0">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <!-- Company Info -->
+        <div class="flex flex-col items-center md:items-start">
+            <img src="_images/logo2.png" alt="IT Solutions Logo" class="w-[200px] max-h-full object-contain">
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-lg font-semibold">Company</h3>
+            <ul class="text-sm text-gray-600 space-y-2 mt-3">
+                <li><a href="about.html" class="hover:text-gray-900">About Us</a></li>
+                <li><a href="portfolio.html" class="hover:text-gray-900">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:text-gray-900">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+            <h3 class="text-lg font-semibold">Services</h3>
+            <ul class="text-sm text-gray-600 space-y-2 mt-3">
+                <li><a href="services.html" class="hover:text-gray-900">Web Development</a></li>
+                <li><a href="ecommerce.html" class="hover:text-gray-900">E-commerce</a></li>
+                <li><a href="consulting.html" class="hover:text-gray-900">IT Consulting</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <p class="text-sm text-gray-600 mt-3">Email: support@itsolutions.com</p>
+            <p class="text-sm text-gray-600">Phone: +1 (123) 456-7890</p>
+            <a href="mailto:support@itsolutions.com" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                Email Us
+            </a>
+
+            <!-- Social Media Links -->
+            <div class="mt-4">
+                <h3 class="text-lg font-semibold">Follow Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4 mt-2">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2h2v-1.5c0-2 1.2-3 3-3 .9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 2h-1.9v7A10 10 0 0 0 22 12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M8 19c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7zm-1-10h2v6H7v-6zm1-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9 12h-2v-3c0-2-1-2-1-2s-1 0-1 2v3h-2v-6h2v1s1-1 3-1 3 1 3 4v3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M19 3h-3a5 5 0 0 0-5 5v3H8v4h3v8h4v-8h3l1-4h-4V8c0-1 0-2 2-2h2V3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-sm text-gray-600 border-t border-gray-300 mt-6 pt-4">
+        &copy; 2025 UnityLan. All rights reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

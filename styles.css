@@ -1,0 +1,282 @@
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+}
+/* Underline hover effect for main nav links */
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover::after {
+    background-color: currentColor; /* Matches text color */
+    width: 100%;
+}
+
+/* Ensure "Services" aligns properly with other menu items */
+.group {
+    display: flex;
+    align-items: center; /* Keeps it vertically centered */
+    position: relative;
+}
+
+/* Adjust the "Services" text */
+.group > a {
+    display: flex;
+    align-items: center;
+    padding: 8px 0; /* Match padding with other nav items */
+    height: 100%; /* Ensure it takes full height like other links */
+}
+
+/* Keep dropdown open while hovering */
+.group:hover > ul,
+.group:focus-within > ul {
+    display: block;
+}
+
+/* Dropdown menu fix */
+.group ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 10;
+    min-width: 150px;
+    pointer-events: none; /* Prevent flickering */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Keep dropdown visible for a short time after hover */
+.group:hover ul,
+.group:focus-within ul {
+    display: block;
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Extend hover area below the dropdown */
+.group ul::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+}
+
+/* Underline effect for dropdown items */
+.dropdown-link {
+    position: relative;
+    display: inline-block; /* Allows underline effect */
+    padding-bottom: 4px;
+}
+
+.dropdown-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-link:hover::after {
+    background-color: currentColor; /* Matches text color */
+    width: 100%;
+}
+
+/* Footer CTA section */
+.cta-section {
+    background-color: #121212;
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 20px; /* Circular corners */
+    max-width: 90%; /* Narrow the width */
+    margin: 0 auto;
+}
+
+.cta-section::before, .cta-section::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 87, 34, 0.4), rgba(255, 0, 0, 0.4)); /* Orange-red gradient */
+    animation: move-gradient 4s infinite alternate;
+}
+
+.cta-section::before {
+    top: -50%;
+    left: -30%;
+}
+
+.cta-section::after {
+    bottom: -50%;
+    right: -30%;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.cta-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.cta-headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-btn-primary {
+    background: linear-gradient(45deg, #FF5722, #FF0000); /* Orange-red gradient */
+    color: #fff;
+    border: none;
+}
+
+.cta-btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes move-gradient {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
+}
+
+
+/* Keyframes for continuous logo cloud movement */
+@keyframes logoCloud {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Logo cloud container */
+.logo-cloud {
+    display: flex;
+    animation: logoCloud 20s linear infinite; /* 20s for slower animation */
+}
+
+/* Individual logo container */
+.logo-container {
+    flex-shrink: 0;
+    width: 150px; /* Control the width of each logo container */
+    padding: 1rem;
+    text-align: center;
+    color: black; /* Make the icons black */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effects for icons */
+.logo-container:hover {
+    transform: translateY(-10px); /* Lift the icon */
+    color: maroon; /* Change the color on hover */
+}
+
+.logo-container i {
+    font-size: 3rem; /* Adjust icon size */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.logo-container:hover i {
+    transform: scale(1.2); /* Scale the icon slightly on hover */
+}
+
+/* Wrapper to contain all logos */
+.logo-wrapper {
+    display: flex;
+    gap: 50px; /* Adjust for spacing between logos */
+    padding: 10px;
+}
+
+/* Overflow hidden to ensure logos don’t show outside the container */
+.overflow-container {
+    overflow: hidden;
+}
+
+/* Custom styles for sticky masonry */
+.sticky-masonry {
+    position: sticky;
+    top: 20px; /* Adjust the top value for how much it stays in place when scrolling */
+}
+
+/* Custom CSS for the overlap effect */
+.form-container {
+    margin-top: -5%; /* Moves the form up 5% to overlap the header */
+    position: relative;
+    z-index: 10;
+}
