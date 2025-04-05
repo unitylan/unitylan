@@ -17,34 +17,155 @@
     </head>
     <body class="bg-gray-100">
 
-    <!-- Header -->
-    <header id="site-header" class="fixed top-0 left-0 w-full h-[120px] flex items-center z-50 transition-all duration-300 bg-transparent">
-        <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4">
-            <!-- Business Logo -->
-            <a href="index.html" class="h-full flex items-center">
-                <img id="logo" src="_images/logo2.png" alt="Business Logo" class="w-[270px] max-h-full object-contain">
-            </a>
-            <nav>
-                <ul class="flex space-x-6 font-semibold items-center">
-                    <li><a href="index.html" class="text-white nav-link">Home</a></li>
-                    <li class="relative group">
-                        <!-- Service Dropdown Menu -->
-                        <a href="#" class="text-white nav-link">Services</a>
-                        <ul class="absolute left-0 hidden mt-2 bg-white text-black shadow-lg rounded-lg w-48 space-y-2 py-2 z-10 group-hover:block">
-                            <li><a href="services.html" class="block px-4 py-2 dropdown-link transition">Web Development</a></li>
-                            <li><a href="ecommerce.html" class="block px-4 py-2 dropdown-link transition">E-commerce</a></li>
-                            <li><a href="Consulting.html" class="block px-4 py-2 dropdown-link transition">Consulting</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="portfolio.html" class="text-white nav-link">Portfolio</a></li>
-                    <li><a href="about.html" class="text-white nav-link">About Us</a></li>
-                    <li class="ml-auto pl-12">
-                        <a href="contact.html" class="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- Header -->
+<header id="site-header" class="fixed top-0 left-0 w-full h-[120px] flex items-center z-50 transition-all duration-300 bg-transparent">
+    <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4">
+        <!-- Business Logo -->
+        <a href="index.html" class="h-full flex items-center">
+            <img id="logo" src="images/logo2.png" alt="Business Logo" class="w-[270px] max-h-full object-contain">
+        </a>
+        <nav>
+            <ul class="flex space-x-6 font-semibold items-center">
+                <li><a href="index.html" class="text-white nav-link">Home</a></li>
+                <li class="relative group flex items-center">
+                    <!-- Service Dropdown Menu with Dropdown Icon -->
+                    <a href="#" class="text-white nav-link flex items-center">
+                        Services 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <ul class="absolute left-0 hidden mt-2 bg-white text-black shadow-lg rounded-lg w-48 space-y-2 py-2 z-10 group-hover:block">
+                        <li><a href="services.html" class="block px-4 py-2 dropdown-link transition">Web Development</a></li>
+                        <li><a href="ecommerce.html" class="block px-4 py-2 dropdown-link transition">E-commerce</a></li>
+                        <li><a href="Consulting.html" class="block px-4 py-2 dropdown-link transition">Consulting</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html" class="text-white nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="text-white nav-link">About Us</a></li>
+
+                <!-- Vertical line separating About and Contact buttons -->
+                <div class="border-l-2 border-white h-6 mx-4"></div>
+
+                <li class="ml-auto pl-12">
+                    <a href="contact.html" class="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Drawer Menu for Smaller Devices -->
+<div id="drawer" class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50 z-40 hidden">
+    <div class="flex justify-end p-4">
+        <button id="close-drawer" class="text-white text-3xl">×</button>
+    </div>
+    <div class="flex justify-center items-center h-full">
+        <nav>
+            <ul class="space-y-4 font-semibold text-white text-xl">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                
+                <!-- Services dropdown in the drawer -->
+                <li class="relative">
+                    <button id="drawer-services-btn" class="text-white nav-link flex items-center">
+                        Services 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <ul id="drawer-services-dropdown" class="hidden space-y-2 py-2">
+                        <li><a href="services.html" class="block px-4 py-2 dropdown-link transition">Web Development</a></li>
+                        <li><a href="ecommerce.html" class="block px-4 py-2 dropdown-link transition">E-commerce</a></li>
+                        <li><a href="Consulting.html" class="block px-4 py-2 dropdown-link transition">Consulting</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                
+                <!-- Vertical line separating About and Contact buttons -->
+                <div class="border-l-2 border-white h-6 mx-4"></div>
+
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- Mobile Drawer Toggle -->
+<button id="open-drawer" class="lg:hidden text-white text-3xl absolute top-4 right-4 z-50">☰</button>
+
+<!-- JavaScript for Drawer Toggle and Dropdown in Mobile -->
+<script>
+    const openDrawerButton = document.getElementById('open-drawer');
+    const closeDrawerButton = document.getElementById('close-drawer');
+    const drawer = document.getElementById('drawer');
+    const drawerServicesBtn = document.getElementById('drawer-services-btn');
+    const drawerServicesDropdown = document.getElementById('drawer-services-dropdown');
+
+    // Open drawer
+    openDrawerButton.addEventListener('click', () => {
+        drawer.classList.remove('hidden');
+    });
+
+    // Close drawer
+    closeDrawerButton.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+    });
+
+    // Toggle Services dropdown in mobile drawer
+    drawerServicesBtn.addEventListener('click', () => {
+        drawerServicesDropdown.classList.toggle('hidden');
+    });
+</script>
+
+<!-- Responsive Styles -->
+<style>
+    /* Tablet and smaller devices */
+    @media (max-width: 768px) {
+        #site-header {
+            padding: 0 10px;
+        }
+        .nav-link {
+            font-size: 1rem;
+        }
+        .ml-auto {
+            margin-left: 0;
+        }
+        .pl-12 {
+            padding-left: 0;
+        }
+
+        /* Hide the desktop nav */
+        nav {
+            display: none;
+        }
+
+        /* Show the drawer button */
+        #open-drawer {
+            display: block;
+        }
+
+        /* Show the drawer menu */
+        #drawer {
+            display: none;
+        }
+
+        #drawer ul {
+            padding: 0;
+        }
+    }
+
+    /* Mobile-specific styles */
+    @media (max-width: 480px) {
+        .nav-link {
+            font-size: 0.875rem;
+        }
+        .border-l-2 {
+            display: none; /* Hide vertical line for mobile */
+        }
+    }
+</style>
 
 <!-- Hero Section -->
 <section class="relative bg-cover bg-center h-[600px] flex items-center" style="background-image: url('images/chip8.jpeg');">
