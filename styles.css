@@ -229,7 +229,7 @@
 /* Logo cloud container */
 .logo-cloud {
     display: flex;
-    animation: logoCloud 60s linear infinite; /* 20s for smooth continuous animation */
+    animation: logoCloud 45s linear infinite; /* 20s for smooth continuous animation */
     /* This makes sure the logos repeat seamlessly */
 }
 
