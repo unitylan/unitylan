@@ -268,6 +268,40 @@
     overflow: hidden;
 }
 
+@keyframes scrollLoop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .overflow-container {
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .logo-cloud {
+      display: flex;
+      width: 200%; /* Twice the original width due to duplication */
+      animation: scrollLoop 20s linear infinite;
+    }
+  
+    .logo-wrapper {
+      display: flex;
+      width: 50%; /* Each wrapper takes up half of the scrollable area */
+    }
+  
+    .logo-container {
+      min-width: 120px;
+      flex-shrink: 0;
+      text-align: center;
+      padding: 1rem 0.5rem;
+    }
+  }
+
 /* Custom styles for sticky masonry */
 .sticky-masonry {
     position: sticky;
