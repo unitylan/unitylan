@@ -154,13 +154,20 @@
     <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Our Services</h2>
     <div class="mt-6">
       <!-- Tab Buttons -->
-      <div class="w-full max-w-md mx-auto flex flex-nowrap justify-between bg-blue-300 rounded-full p-1">
-        <button id="services-btn" class="tab-button min-w-[110px] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('services', event)">Web Development</button>
-      
-        <button id="ecommerce-btn" class="tab-button min-w-[110px] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('ecommerce', event)">E-Commerce</button>
-      
-        <button id="itconsulting-btn" class="tab-button min-w-[110px] px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('itconsulting', event)">Consulting</button>
+      <div class="flex justify-center bg-blue-300 rounded-full p-1 w-fit mx-auto sm:flex-nowrap sm:gap-0 max-sm:w-full max-sm:justify-between max-sm:max-w-[350px]">
+        <button id="services-btn" class="tab-button px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white max-sm:min-w-[100px]">
+          Web Development
+        </button>
+        
+        <button id="ecommerce-btn" class="tab-button px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white max-sm:min-w-[100px]">
+          E-Commerce
+        </button>
+        
+        <button id="itconsulting-btn" class="tab-button px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white max-sm:min-w-[100px]">
+          Consulting
+        </button>
       </div>
+      
         
       <!-- Services Tab -->
       <div id="services" class="tab-content mt-6 hidden overflow-hidden relative">
