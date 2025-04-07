@@ -112,21 +112,16 @@ mobileMenuClose.addEventListener("click", () => {
     mobileMenu.style.transform = "translateX(100%)";
 });
 
-// Accordion functionality for Services in Drawer
+// Accordion for Services in Drawer
 const servicesHeading = document.getElementById("services-heading");
 const servicesSubheadings = document.getElementById("services-subheadings");
 const servicesIcon = servicesHeading.querySelector("svg");
 
 servicesHeading.addEventListener('click', () => {
-    // Toggle the visibility of the subheadings
     servicesSubheadings.classList.toggle('hidden');
-
-    // Toggle the arrow direction
-    if (servicesSubheadings.classList.contains('hidden')) {
-        servicesIcon.style.transform = "rotate(0deg)"; // Point down
-    } else {
-        servicesIcon.style.transform = "rotate(180deg)"; // Point up
-    }
+    servicesIcon.style.transform = servicesSubheadings.classList.contains('hidden')
+        ? "rotate(0deg)"
+        : "rotate(180deg)";
 });
 
 // Scroll to hide/show header on mobile
@@ -136,9 +131,11 @@ const header = document.getElementById("site-header");
 window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
 
-    // Only apply the effect on mobile
     if (window.innerWidth < 1024) {
-        if (currentScrollY > lastScrollY) {
+        if (currentScrollY <= 0) {
+            // At the top of the page, always show the header
+            header.classList.remove("hide-on-scroll");
+        } else if (currentScrollY > lastScrollY) {
             // Scrolling down: hide the header
             header.classList.add("hide-on-scroll");
         } else {

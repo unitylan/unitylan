@@ -331,47 +331,46 @@
     #logo {
       width: 180px;
     }
-
+  
+    /* Ensure header has solid white background on mobile */
+    #site-header {
+      height: 80px;
+      background-color: white; /* Added */
+    }
+  
     .mobile-scroll-show {
       transform: translateY(0);
-      background-color: rgba(255, 255, 255, 0.9); /* Slight background to avoid transparency */
+      background-color: white; /* Removed transparency */
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     }
-
+  
     .mobile-scroll-show.hide-on-scroll {
       transform: translateY(-100%);
     }
-
-    .mobile-scroll-show {
-      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    }
-
-    /* Reduce header height on mobile */
-    #site-header {
-        height: 80px;
-    }
-
+  
     /* Center logo and hamburger in mobile view */
     #site-header .flex {
-        justify-content: space-between;
+      justify-content: space-between;
     }
-
+  
     /* Slight padding tweak for better spacing */
     #mobile-menu-toggle {
-        padding: 0.5rem;
+      padding: 0.5rem;
     }
-
+  
     /* Increase mobile menu link spacing */
     #mobile-menu ul li a {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
-
-    /* Ensure mobile menu has a solid background */
+  
+    /* Fix: Solid white background for mobile menu */
     #mobile-menu {
-        background-color: white !important;
-        opacity: 1 !important;
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(100%);
-        z-index: 9999; /* Ensure it’s above everything */
+      background-color: white !important;
+      opacity: 1 !important;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 9999;
     }
-}
+  }
+  
