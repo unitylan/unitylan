@@ -336,13 +336,12 @@
 </section>
 
 <!-- Section Separator with Tech-Inspired Spaced-Out Hexagonal Background -->
-<section class="relative py-16 bg-white text-gray-900" style="width: calc(100% - 150px); margin-left: auto; margin-right: auto; border-radius: 50px;">
+<section class="relative py-16 bg-white text-gray-900 w-full sm:[width:calc(100%-150px)] sm:mx-auto" style="border-radius: 50px;">
     <!-- SVG Background -->
     <div class="absolute inset-0 w-full h-full opacity-20">
-        <svg class="w-full h-full scale-100 sm:scale-100 [@media(max-width:639px)]:scale-75 origin-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg class="w-full h-full scale-[0.7] sm:scale-100 origin-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <defs>
-                <pattern id="hexPattern" width="100" height="86" patternUnits="userSpaceOnUse"
-                    patternTransform="translate(50,0)">
+                <pattern id="hexPattern" width="100" height="86" patternUnits="userSpaceOnUse" patternTransform="translate(50,0)">
                     <polygon points="50,0 100,25 100,61 50,86 0,61 0,25" fill="none" stroke="black" stroke-width="1" />
                 </pattern>
             </defs>
@@ -351,14 +350,14 @@
     </div>
 
     <!-- Centered Container with Border -->
-    <div class="relative max-w-6xl mx-auto border-t-2 border-b-2 border-gray-400 px-4">
-        <div class="flex flex-row items-center justify-between gap-4 sm:gap-0 [@media(max-width:639px)]:text-sm">
+    <div class="relative max-w-full border-t-2 border-b-2 border-gray-400 px-4">
+        <div class="flex flex-row items-center justify-between gap-4">
             <!-- Left-Aligned Content -->
             <div class="flex-1 min-w-0">
-                <h2 class="text-3xl font-semibold text-gray-800 leading-snug">
+                <h2 class="text-sm sm:text-3xl font-semibold text-gray-800 leading-snug sm:leading-normal">
                     Discover what we can do for you
                 </h2>
-                <p class="text-lg text-gray-700 mt-2">
+                <p class="text-xs sm:text-lg text-gray-700 mt-1 sm:mt-2 leading-snug sm:leading-relaxed">
                     Driven by a passion for innovation, our team is committed to providing our clients with the most innovative and powerful development solutions in the industry.
                 </p>
             </div>
@@ -366,7 +365,7 @@
             <!-- Right-Aligned Button -->
             <div class="flex-shrink-0">
                 <a href="contact.html"
-                    class="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300 text-center whitespace-nowrap">
+                   class="inline-block bg-blue-500 text-white text-xs sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300 text-center whitespace-nowrap">
                     Reach Out
                 </a>
             </div>
