@@ -229,7 +229,7 @@
 .logo-cloud {
     display: flex;
     animation: logoCloud 20s linear infinite; /* 20s for slower animation */
-    width: 100vw; /* Ensure the cloud spans the entire viewport width */
+    width: 200%; /* Double the width to accommodate two sets of logos */
 }
 
 /* Individual logo container */
@@ -286,12 +286,12 @@
 /* For small screens, reduce logo size and adjust the animation */
 @media (max-width: 767px) {
     .logo-container {
-        width: 120px; /* Reduce the size of each logo container */
-        padding: 0.5rem; /* Reduce padding */
+        width: 150px; /* Revert the size of each logo container */
+        padding: 1rem; /* Keep padding consistent */
     }
 
     .logo-container i {
-        font-size: 2rem; /* Reduce icon size on small screens */
+        font-size: 2.5rem; /* Keep the icon size more reasonable for mobile */
     }
 
     .logo-wrapper {
@@ -299,19 +299,19 @@
     }
 
     .logo-cloud {
-        animation: logoCloud 15s linear infinite; /* Speed up animation on mobile */
+        animation: logoCloud 25s linear infinite; /* Slightly slower animation on mobile */
     }
 }
 
 /* For extra small screens (e.g., mobile phones in portrait mode) */
 @media (max-width: 480px) {
     .logo-container {
-        width: 100px; /* Further reduce the width of logo containers */
-        padding: 0.25rem; /* Even smaller padding */
+        width: 120px; /* Reduce the width of each logo container slightly */
+        padding: 0.5rem; /* Adjust padding */
     }
 
     .logo-container i {
-        font-size: 1.5rem; /* Further reduce icon size */
+        font-size: 2rem; /* Slightly smaller icon size for mobile */
     }
 
     .logo-wrapper {
@@ -319,10 +319,9 @@
     }
 
     .logo-cloud {
-        animation: logoCloud 12s linear infinite; /* Speed up animation more on extra small screens */
+        animation: logoCloud 30s linear infinite; /* Slower animation on very small screens */
     }
 }
-
 
 /* Custom styles for sticky masonry */
 .sticky-masonry {
