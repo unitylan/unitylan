@@ -331,46 +331,26 @@
     #logo {
       width: 180px;
     }
-  
-    /* Ensure header has solid white background on mobile */
+
+    /* Reduce header height on mobile */
     #site-header {
       height: 80px;
-      background-color: white; /* Added */
     }
-  
-    .mobile-scroll-show {
-      transform: translateY(0);
-      background-color: white; /* Removed transparency */
-      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    }
-  
-    .mobile-scroll-show.hide-on-scroll {
-      transform: translateY(-100%);
-    }
-  
+
     /* Center logo and hamburger in mobile view */
     #site-header .flex {
       justify-content: space-between;
     }
-  
+
     /* Slight padding tweak for better spacing */
     #mobile-menu-toggle {
       padding: 0.5rem;
     }
-  
+
     /* Increase mobile menu link spacing */
     #mobile-menu ul li a {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
-    }
-  
-    /* Fix: Solid white background for mobile menu */
-    #mobile-menu {
-      background-color: white !important;
-      opacity: 1 !important;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-      z-index: 9999;
     }
   }
   
