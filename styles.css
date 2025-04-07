@@ -268,40 +268,6 @@
     overflow: hidden;
 }
 
-@keyframes scrollLoop {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .overflow-container {
-      overflow: hidden;
-      position: relative;
-    }
-  
-    .logo-cloud {
-      display: flex;
-      width: fit-content;
-      min-width: 200%;
-      animation: scrollLoop 10s linear infinite;
-    }
-  
-    .logo-wrapper {
-      display: flex;
-      flex-shrink: 0;
-    }
-  
-    .logo-container {
-      flex: 0 0 auto;
-      width: 120px;
-      text-align: center;
-      padding: 1rem 0.75rem;
-    }
-  }
 
 /* Custom styles for sticky masonry */
 .sticky-masonry {
