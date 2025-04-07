@@ -321,6 +321,7 @@ const elements = document.querySelectorAll('.fade-on-scroll');
 
   elements.forEach(element => observer.observe(element));
 
+  // Lazy load background images
   document.addEventListener("DOMContentLoaded", () => {
     const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
 
@@ -340,3 +341,18 @@ const elements = document.querySelectorAll('.fade-on-scroll');
 
     lazyBackgrounds.forEach(el => observer.observe(el));
   });
+
+// Logo Cloud Animation
+  window.addEventListener('load', function() {
+    const logoCloud = document.querySelector('.logo-cloud');
+    const logoContainers = document.querySelectorAll('.logo-container');
+    
+    // Calculate total width of all logo containers
+    let totalWidth = 0;
+    logoContainers.forEach(container => {
+        totalWidth += container.offsetWidth;
+    });
+    
+    // Set the width of the logo cloud to be the total width of the logos
+    logoCloud.style.width = `${totalWidth * 2}px`; // Multiply by 2 to ensure seamless loop
+});
