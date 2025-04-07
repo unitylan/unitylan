@@ -339,7 +339,7 @@
 <section class="relative py-16 bg-white text-gray-900" style="width: calc(100% - 150px); margin-left: auto; margin-right: auto; border-radius: 50px;">
     <!-- SVG Background -->
     <div class="absolute inset-0 w-full h-full opacity-20">
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg class="w-full h-full sm:scale-100 scale-75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <defs>
                 <pattern id="hexPattern" width="100" height="86" patternUnits="userSpaceOnUse"
                     patternTransform="translate(50,0)">
@@ -352,17 +352,21 @@
 
     <!-- Centered Container with Border -->
     <div class="relative max-w-6xl mx-auto border-t-2 border-b-2 border-gray-400 px-4">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-0">
+        <div class="flex justify-between items-center gap-4">
             <!-- Left-Aligned Content -->
-            <div class="flex-1">
-                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Discover what we can do for you</h2>
-                <p class="text-base sm:text-lg text-gray-700 mt-2">Driven by a passion for innovation, our team is committed to providing our clients with the most innovative and powerful development solutions in the industry.</p>
+            <div class="flex-1 min-w-0">
+                <h2 class="text-xl sm:text-3xl font-semibold text-gray-800 leading-snug sm:leading-normal">
+                    Discover what we can do
+                </h2>
+                <p class="text-sm sm:text-lg text-gray-700 mt-2 leading-snug sm:leading-relaxed">
+                    Passionate about innovation, we deliver powerful development solutions for our clients.
+                </p>
             </div>
 
             <!-- Right-Aligned Button -->
-            <div class="w-full sm:w-auto">
+            <div class="flex-shrink-0">
                 <a href="contact.html"
-                    class="block text-center sm:inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300 w-full sm:w-auto">
+                    class="inline-block bg-blue-500 text-white text-sm sm:text-base px-5 sm:px-6 py-2 sm:py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300">
                     Reach Out
                 </a>
             </div>
