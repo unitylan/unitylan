@@ -285,20 +285,21 @@
   
     .logo-cloud {
       display: flex;
-      width: 200%; /* Twice the original width due to duplication */
-      animation: scrollLoop 20s linear infinite;
+      width: fit-content;
+      min-width: 200%;
+      animation: scrollLoop 10s linear infinite;
     }
   
     .logo-wrapper {
       display: flex;
-      width: 50%; /* Each wrapper takes up half of the scrollable area */
+      flex-shrink: 0;
     }
   
     .logo-container {
-      min-width: 120px;
-      flex-shrink: 0;
+      flex: 0 0 auto;
+      width: 120px;
       text-align: center;
-      padding: 1rem 0.5rem;
+      padding: 1rem 0.75rem;
     }
   }
 
