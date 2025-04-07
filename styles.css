@@ -368,6 +368,10 @@
 
     /* Ensure mobile menu has a solid background */
     #mobile-menu {
-        background-color: white; /* Solid white background for the mobile menu */
+        background-color: white !important;
+        opacity: 1 !important;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        z-index: 9999; /* Ensure it’s above everything */
     }
 }
