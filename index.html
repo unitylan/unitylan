@@ -624,12 +624,15 @@
 <footer class="bg-white text-gray-800 p-10 mt-0">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
 
-        <!-- Company Info & Social (Mobile Only) -->
-        <div class="flex flex-col items-center md:items-start">
-            <img src="images/logo2.png" alt="IT Solutions Logo" class="w-[200px] max-h-full object-contain">
+<!-- Company Info & Social (Mobile in row, stacked on md) -->
+<div class="flex flex-col md:items-start">
+    <!-- Logo + Social row on mobile -->
+    <div class="flex flex-col md:flex-col items-center md:items-start w-full">
+        <div class="flex items-center justify-center md:justify-start space-x-4 w-full">
+            <img src="images/logo2.png" alt="IT Solutions Logo" class="w-[150px] max-h-full object-contain">
 
-            <!-- Social Media (Mobile Only) -->
-            <div class="flex justify-center space-x-4 mt-4 md:hidden">
+            <!-- Social Media (inline on mobile) -->
+            <div class="flex space-x-3">
                 <a href="#" class="text-gray-600 hover:text-gray-900 transition">
                     <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                         <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2h2v-1.5c0-2 1.2-3 3-3 .9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 2h-1.9v7A10 10 0 0 0 22 12z"/>
@@ -646,10 +649,13 @@
                     </svg>
                 </a>
             </div>
-
-            <!-- Divider (Mobile Only) -->
-            <hr class="border-t border-gray-300 w-full mt-4 md:hidden">
         </div>
+
+        <!-- Divider (Mobile Only) -->
+        <hr class="border-t border-gray-300 w-full mt-4 md:hidden">
+    </div>
+</div>
+
 
         <!-- Quick Links -->
         <div>
