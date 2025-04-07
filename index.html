@@ -149,77 +149,120 @@
     </div>
 </section>
    
-        <!-- Services Section -->
-        <section id="products" class="p-10 text-center">
-                <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
-                <div class="mt-6">
-                    <div class="flex justify-center mt-6 bg-blue-300 rounded-full p-1 w-fit mx-auto">
-                        <button id="services-btn" class="tab-button px-6 py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('services', event)">Web Development</button>
-                        <button id="ecommerce-btn" class="tab-button px-6 py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('ecommerce', event)">E-Commerce</button>
-                        <button id="itconsulting-btn" class="tab-button px-6 py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('itconsulting', event)">Consulting</button>
-                    </div>
-                    
-                    <div id="services" class="tab-content mt-6 hidden overflow-hidden relative">
-                        <div class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
-                            <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
-                                <h3 class="text-xl font-semibold">Web Development</h3>
-                                <p class="text-gray-600 mt-2">We build and maintain websites and web applications, focusing on both front-end design and back-end functionality to provide a seamless, responsive, and user-friendly online experience.</p>
-                                <a href="services.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/web.jpeg');">
-                                <h3 class="text-xl font-semibold">Website Development</h3>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/ui.jpeg');">
-                                <h3 class="text-xl font-semibold">UI Design & reDesign</h3>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/old.jpeg');">
-                                <h3 class="text-xl font-semibold">SEO & Marketing</h3>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/sup.webp');">
-                                <h3 class="text-xl font-semibold">Support & Maintenance</h3>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="ecommerce" class="tab-content mt-6 hidden overflow-hidden relative">
-                        <div class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
-                            <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
-                                <h3 class="text-xl font-semibold">E-Commerce</h3>
-                                <p class="text-gray-600 mt-2">We create online stores, integrating secure payment gateways and managing product inventories to provide businesses with a robust, scalable platform for selling products and services online.</p>
-                                <a href="ecommerce.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/ecom.jpeg');">
-                                <h3 class="text-xl font-semibold">Online Store Setup</h3>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/paymentgate.webp');">
-                                <h3 class="text-xl font-semibold">Payment Gateway Integration</h3>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/product.webp');">
-                                <h3 class="text-xl font-semibold">Product Configuration</h3>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="itconsulting" class="tab-content mt-6 hidden overflow-hidden relative">
-                        <div class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
-                            <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
-                                <h3 class="text-xl font-semibold">Consulting</h3>
-                                <p class="text-gray-600 mt-2">We help businesses assess and implement technology solutions that enhance efficiency, security, and scalability, offering expert guidance on IT strategy, systems integration, and technology adoption.</p>
-                                <a href="consulting.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/marketing.webp');">
-                                <h3 class="text-xl font-semibold">Data Analytics</h3>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/customdesign.webp');">
-                                <h3 class="text-xl font-semibold">Systems Integration</h3>
-                            </div>
-                            <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/cloud.jpeg');">
-                                <h3 class="text-xl font-semibold">Security & Risk Management</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
+<!-- Services Section -->
+<section id="products" class="p-6 sm:p-10 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Our Services</h2>
+    <div class="mt-6">
+      <!-- Tab Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-0 sm:flex-nowrap mt-6 bg-blue-300 rounded-full p-1 w-full sm:w-fit mx-auto">
+        <button id="services-btn" class="tab-button px-4 sm:px-6 py-2 sm:py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('services', event)">Web Development</button>
+        <button id="ecommerce-btn" class="tab-button px-4 sm:px-6 py-2 sm:py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('ecommerce', event)">E-Commerce</button>
+        <button id="itconsulting-btn" class="tab-button px-4 sm:px-6 py-2 sm:py-3 font-semibold transition-all duration-300 rounded-full text-black hover:bg-blue-400 focus:bg-blue-500 focus:text-white" onclick="showTab('itconsulting', event)">Consulting</button>
+      </div>
+  
+      <!-- Services Tab -->
+      <div id="services" class="tab-content mt-6 hidden overflow-hidden relative">
+        <div class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-2">
+          <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
+            <h3 class="text-xl font-semibold">Web Development</h3>
+            <p class="text-gray-600 mt-2">We build and maintain websites and web applications, focusing on both front-end design and back-end functionality to provide a seamless, responsive, and user-friendly online experience.</p>
+            <a href="services.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/web.jpeg');">
+            <h3 class="text-xl font-semibold">Website Development</h3>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/ui.jpeg');">
+            <h3 class="text-xl font-semibold">UI Design & reDesign</h3>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/old.jpeg');">
+            <h3 class="text-xl font-semibold">SEO & Marketing</h3>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/sup.webp');">
+            <h3 class="text-xl font-semibold">Support & Maintenance</h3>
+          </div>
+        </div>
+        <div class="scroll-dots flex justify-center mt-4 gap-2 sm:hidden" data-target="services"></div>
+      </div>
+  
+      <!-- E-Commerce Tab -->
+      <div id="ecommerce" class="tab-content mt-6 hidden overflow-hidden relative">
+        <div class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-2">
+          <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
+            <h3 class="text-xl font-semibold">E-Commerce</h3>
+            <p class="text-gray-600 mt-2">We create online stores, integrating secure payment gateways and managing product inventories to provide businesses with a robust, scalable platform for selling products and services online.</p>
+            <a href="ecommerce.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/ecom.jpeg');">
+            <h3 class="text-xl font-semibold">Online Store Setup</h3>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/paymentgate.webp');">
+            <h3 class="text-xl font-semibold">Payment Gateway Integration</h3>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/product.webp');">
+            <h3 class="text-xl font-semibold">Product Configuration</h3>
+          </div>
+        </div>
+        <div class="scroll-dots flex justify-center mt-4 gap-2 sm:hidden" data-target="ecommerce"></div>
+      </div>
+  
+      <!-- IT Consulting Tab -->
+      <div id="itconsulting" class="tab-content mt-6 hidden overflow-hidden relative">
+        <div class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-2">
+          <div class="bg-white p-6 rounded-lg shadow-md text-left min-w-[300px] snap-center">
+            <h3 class="text-xl font-semibold">Consulting</h3>
+            <p class="text-gray-600 mt-2">We help businesses assess and implement technology solutions that enhance efficiency, security, and scalability, offering expert guidance on IT strategy, systems integration, and technology adoption.</p>
+            <a href="consulting.html" class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg">Learn More</a>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/marketing.webp');">
+            <h3 class="text-xl font-semibold">Data Analytics</h3>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/customdesign.webp');">
+            <h3 class="text-xl font-semibold">Systems Integration</h3>
+          </div>
+          <div class="p-6 rounded-lg shadow-md text-white bg-cover bg-center min-w-[300px] snap-center" style="background-image: url('images/cloud.jpeg');">
+            <h3 class="text-xl font-semibold">Security & Risk Management</h3>
+          </div>
+        </div>
+        <div class="scroll-dots flex justify-center mt-4 gap-2 sm:hidden" data-target="itconsulting"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Scroll Dot Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dotGroups = document.querySelectorAll('.scroll-dots');
+  
+      dotGroups.forEach(group => {
+        const targetId = group.getAttribute('data-target');
+        const scrollContainer = document.querySelector(`#${targetId} .flex.overflow-x-auto`);
+        const cards = scrollContainer?.querySelectorAll('.snap-center') || [];
+        const dots = [];
+  
+        // Create dots based on number of cards
+        cards.forEach((_, i) => {
+          const dot = document.createElement('span');
+          dot.className = `w-2 h-2 rounded-full transition-all bg-gray-300`;
+          if (i === 0) dot.classList.add('bg-gray-500'); // active
+          group.appendChild(dot);
+          dots.push(dot);
+        });
+  
+        // Scroll listener to update dots
+        scrollContainer?.addEventListener('scroll', () => {
+          const scrollLeft = scrollContainer.scrollLeft;
+          const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(scrollContainer).gap || 16);
+          const activeIndex = Math.round(scrollLeft / cardWidth);
+  
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('bg-gray-500', i === activeIndex);
+            dot.classList.toggle('bg-gray-300', i !== activeIndex);
+          });
+        });
+      });
+    });
+  </script>
+  
     
 <!-- Infographic-Style Timeline -->
 <section class="p-10 bg-gray-100 relative overflow-hidden">
