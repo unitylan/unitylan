@@ -320,3 +320,23 @@ const elements = document.querySelectorAll('.fade-on-scroll');
   }, { threshold: 0.5 });
 
   elements.forEach(element => observer.observe(element));
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const bg = el.getAttribute("data-bg");
+          el.style.backgroundImage = `url(${bg})`;
+          el.classList.add("bg-loaded");
+          obs.unobserve(el);
+        }
+      });
+    }, {
+      rootMargin: "0px 0px 200px 0px"
+    });
+
+    lazyBackgrounds.forEach(el => observer.observe(el));
+  });
