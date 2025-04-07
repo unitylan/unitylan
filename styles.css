@@ -325,3 +325,32 @@
     position: relative;
     z-index: 10;
 }
+
+
+@media (max-width: 1023px) {
+    /* Shrink logo on smaller screens */
+    #logo {
+      width: 180px;
+    }
+
+    /* Reduce header height on mobile */
+    #site-header {
+      height: 80px;
+    }
+
+    /* Center logo and hamburger in mobile view */
+    #site-header .flex {
+      justify-content: space-between;
+    }
+
+    /* Slight padding tweak for better spacing */
+    #mobile-menu-toggle {
+      padding: 0.5rem;
+    }
+
+    /* Increase mobile menu link spacing */
+    #mobile-menu ul li a {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
