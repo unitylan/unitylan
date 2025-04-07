@@ -230,8 +230,6 @@
     display: flex;
     animation: logoCloud 30s linear infinite; /* 20s for smooth continuous animation */
     /* This makes sure the logos repeat seamlessly */
-    max-height: 100vh; /* Ensures it does not exceed the viewport height */
-    overflow: hidden; /* Hides any overflow */
 }
 
 /* Individual logo container */
@@ -271,8 +269,6 @@
     overflow: hidden;
     position: relative; /* Ensures it only shows the visible part of the logo cloud */
     width: 100%; /* Ensures the container takes the full width of the parent */
-    height: 100%; /* Limit the height to 100% of its parent */
-    max-height: 100vh; /* Ensure it does not overflow the viewport height */
 }
 
 /* Responsive Design - Mobile Adjustments */
