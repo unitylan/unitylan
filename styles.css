@@ -229,6 +229,7 @@
 .logo-cloud {
     display: flex;
     animation: logoCloud 20s linear infinite; /* 20s for slower animation */
+    width: 100vw; /* Ensure the cloud spans the entire viewport width */
 }
 
 /* Individual logo container */
@@ -266,6 +267,60 @@
 /* Overflow hidden to ensure logos don’t show outside the container */
 .overflow-container {
     overflow: hidden;
+    position: relative; /* Ensure it takes up necessary space for the animation */
+    width: 100%; /* Ensure the container takes full width of the parent */
+}
+
+/* Create a second set of logos for infinite looping effect */
+.overflow-container .logo-cloud {
+    animation: logoCloud 20s linear infinite; /* Keeps the animation running continuously */
+}
+
+.overflow-container .logo-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Mobile Responsiveness */
+
+/* For small screens, reduce logo size and adjust the animation */
+@media (max-width: 767px) {
+    .logo-container {
+        width: 120px; /* Reduce the size of each logo container */
+        padding: 0.5rem; /* Reduce padding */
+    }
+
+    .logo-container i {
+        font-size: 2rem; /* Reduce icon size on small screens */
+    }
+
+    .logo-wrapper {
+        gap: 30px; /* Reduce the gap between logos */
+    }
+
+    .logo-cloud {
+        animation: logoCloud 15s linear infinite; /* Speed up animation on mobile */
+    }
+}
+
+/* For extra small screens (e.g., mobile phones in portrait mode) */
+@media (max-width: 480px) {
+    .logo-container {
+        width: 100px; /* Further reduce the width of logo containers */
+        padding: 0.25rem; /* Even smaller padding */
+    }
+
+    .logo-container i {
+        font-size: 1.5rem; /* Further reduce icon size */
+    }
+
+    .logo-wrapper {
+        gap: 20px; /* Tighten the gap between logos */
+    }
+
+    .logo-cloud {
+        animation: logoCloud 12s linear infinite; /* Speed up animation more on extra small screens */
+    }
 }
 
 
