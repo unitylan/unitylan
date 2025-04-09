@@ -161,93 +161,115 @@
     </div>
   </div>
 
- <!-- Add On Timeline -->
- <div class="container mx-auto px-6 py-12">
-    <div class="text-center mb-3">
-      <h1 class="text-3xl font-semibold text-gray-800">Add-On Services</h1>
-      <p class="text-gray-600 mt-2">Enhance your website with the following additional services.</p>
-    </div>
-
-    <!-- Horizontal Timeline for Add-On Services -->
-    <div class="relative">
-      <ul class="flex justify-between items-center relative z-10">
-        <!-- Service 1 -->
-        <li class="text-center w-1/6 relative">
-          <div class="timeline-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mx-auto">
-              <i class="fas fa-check-circle text-xl"></i>
-            </div>
-          </div>
-          <div class="mt-24">
-            <h3 class="text-lg font-semibold">Domain Registration & Hosting</h3>
-          </div>
-        </li>
-
-        <!-- Service 2 -->
-        <li class="text-center w-1/6 relative">
-          <div class="timeline-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mx-auto">
-              <i class="fas fa-check-circle text-xl"></i>
-            </div>
-          </div>
-          <div class="mt-20">
-            <h3 class="text-lg font-semibold">Additional Pages</h3>
-          </div>
-        </li>
-
-        <!-- Service 3 -->
-        <li class="text-center w-1/6 relative">
-          <div class="timeline-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mx-auto">
-              <i class="fas fa-check-circle text-xl"></i>
-            </div>
-          </div>
-          <div class="mt-20">
-            <h3 class="text-lg font-semibold">Custom Design</h3>
-          </div>
-        </li>
-
-        <!-- Service 4 -->
-        <li class="text-center w-1/6 relative">
-          <div class="timeline-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mx-auto">
-              <i class="fas fa-check-circle text-xl"></i>
-            </div>
-          </div>
-          <div class="mt-24">
-            <h3 class="text-lg font-semibold">Social Media Integration</h3>
-          </div>
-        </li>
-
-        <!-- Service 5 -->
-        <li class="text-center w-1/6 relative">
-          <div class="timeline-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mx-auto">
-              <i class="fas fa-check-circle text-xl"></i>
-            </div>
-          </div>
-          <div class="mt-24">
-            <h3 class="text-lg font-semibold">Database Implementation</h3>
-          </div>
-        </li>
-
-        <!-- Service 6 -->
-        <li class="text-center w-1/6 relative">
-          <div class="timeline-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center mx-auto">
-              <i class="fas fa-check-circle text-xl"></i>
-            </div>
-          </div>
-          <div class="mt-24">
-            <h3 class="text-lg font-semibold">Advanced SEO Services</h3>
-          </div>
-        </li>
-      </ul>
-
-      <!-- Timeline connecting line -->
-      <div class="absolute inset-y-1/2 left-0 w-full border-t-4 border-gray-600 z-0"></div>
-    </div>
+<!-- Add On Timeline -->
+<div class="container mx-auto px-6 py-12">
+  <div class="text-center mb-3">
+    <h1 class="text-3xl font-semibold text-gray-800">Add-On Services</h1>
+    <p class="text-gray-600 mt-2">
+      Enhance your website with valuable features designed to boost functionality, performance, and online presence.
+    </p>
   </div>
+
+  <!-- Responsive Timeline for Add-On Services -->
+  <div class="relative flex flex-col md:block">
+    <!-- Vertical or Horizontal Line -->
+    <div class="absolute md:inset-y-1/2 md:left-0 md:w-full md:border-t-4 md:border-gray-600 
+                left-1/2 top-0 h-full border-l-4 border-gray-600 z-0 transform -translate-x-1/2 md:translate-x-0">
+    </div>
+
+    <ul class="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+      <!-- Service 1 -->
+      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
+        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
+          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-check-circle text-xl"></i>
+          </div>
+        </div>
+        <div class="mt-12 md:mt-24 px-2">
+          <h3 class="text-lg font-semibold">Domain Registration & Hosting</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            We handle securing your domain name and provide fast, reliable hosting—so your business is always online and professional.
+          </p>
+        </div>
+      </li>
+
+      <!-- Service 2 -->
+      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
+        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
+          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-check-circle text-xl"></i>
+          </div>
+        </div>
+        <div class="mt-12 md:mt-20 px-2">
+          <h3 class="text-lg font-semibold">Additional Pages</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Need more sections like FAQs, Careers, or Testimonials? We’ll expand your site while maintaining consistency and flow.
+          </p>
+        </div>
+      </li>
+
+      <!-- Service 3 -->
+      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
+        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
+          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-check-circle text-xl"></i>
+          </div>
+        </div>
+        <div class="mt-12 md:mt-20 px-2">
+          <h3 class="text-lg font-semibold">Custom Design</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Tailor your website’s look to reflect your brand identity with a fully custom design approach—not a one-size-fits-all.
+          </p>
+        </div>
+      </li>
+
+      <!-- Service 4 -->
+      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
+        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
+          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-check-circle text-xl"></i>
+          </div>
+        </div>
+        <div class="mt-12 md:mt-24 px-2">
+          <h3 class="text-lg font-semibold">Social Media Integration</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            We connect your site to social media platforms to boost visibility and engagement, making it easy for users to follow and share.
+          </p>
+        </div>
+      </li>
+
+      <!-- Service 5 -->
+      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
+        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
+          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-check-circle text-xl"></i>
+          </div>
+        </div>
+        <div class="mt-12 md:mt-24 px-2">
+          <h3 class="text-lg font-semibold">Database Implementation</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            We add secure database support for storing client data, product listings, or form submissions—whatever your business needs.
+          </p>
+        </div>
+      </li>
+
+      <!-- Service 6 -->
+      <li class="w-full md:w-1/6 text-center md:text-center relative mb-8 md:mb-0">
+        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
+          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
+            <i class="fas fa-check-circle text-xl"></i>
+          </div>
+        </div>
+        <div class="mt-12 md:mt-24 px-2">
+          <h3 class="text-lg font-semibold">Advanced SEO Services</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Improve your site’s search engine visibility with expert SEO strategies that help drive targeted traffic and conversions.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <!-- Section Separator -->
 <section class="relative py-16 px-6 bg-white text-gray-900">
