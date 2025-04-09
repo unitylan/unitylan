@@ -346,3 +346,33 @@ const elements = document.querySelectorAll('.fade-on-scroll');
     duration: 800,
     offset: 100,
   });
+
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+mobileMenuToggle.addEventListener("click", () => {
+    mobileMenu.style.transform = "translateX(0)";
+});
+
+mobileMenuClose.addEventListener("click", () => {
+    mobileMenu.style.transform = "translateX(100%)";
+});
+
+// Accordion functionality for Services in Drawer
+const servicesHeading = document.getElementById("services-heading");
+const servicesSubheadings = document.getElementById("services-subheadings");
+const servicesIcon = servicesHeading.querySelector("svg");
+
+servicesHeading.addEventListener('click', () => {
+    // Toggle the visibility of the subheadings
+    servicesSubheadings.classList.toggle('hidden');
+
+    // Toggle the arrow direction
+    if (servicesSubheadings.classList.contains('hidden')) {
+        servicesIcon.style.transform = "rotate(0deg)"; // Point down
+    } else {
+        servicesIcon.style.transform = "rotate(180deg)"; // Point up
+    }
+});
