@@ -388,6 +388,28 @@
     </div>
 </section>
 
+<!-- Additional CSS -->
+<style>
+    /* Desktop styles (untouched) */
+    .section-container {
+        background-image: url('your-svg-file.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 767px) {
+        .absolute {
+            background-position: center center; /* Ensure SVG is centered */
+            background-size: contain; /* Adjust for mobile devices */
+            top: 0; /* Adjust top margin for mobile */
+            left: 0; /* Center on mobile */
+            transform: none; /* Remove translation for mobile */
+            scale: 1; /* Reset scale to 1 on mobile */
+        }
+    }
+</style>
 
     <!-- Portfolio Section -->
     <section  id="portfolio" class="py-12 px-4">
