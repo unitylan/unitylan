@@ -97,6 +97,40 @@
     </div>
 </header>
 
+<!-- Scripts -->
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+    mobileMenuToggle.addEventListener("click", () => {
+        mobileMenu.style.transform = "translateX(0)";
+    });
+
+    mobileMenuClose.addEventListener("click", () => {
+        mobileMenu.style.transform = "translateX(100%)";
+    });
+
+    // Accordion functionality for Services in Drawer
+    const servicesHeading = document.getElementById("services-heading");
+    const servicesSubheadings = document.getElementById("services-subheadings");
+    const servicesIcon = servicesHeading.querySelector("svg");
+
+    servicesHeading.addEventListener('click', () => {
+        // Toggle the visibility of the subheadings
+        servicesSubheadings.classList.toggle('hidden');
+
+        // Toggle the arrow direction
+        if (servicesSubheadings.classList.contains('hidden')) {
+            servicesIcon.style.transform = "rotate(0deg)"; // Point down
+        } else {
+            servicesIcon.style.transform = "rotate(180deg)"; // Point up
+        }
+    });
+</script>
+
+
 <!-- Hero Section -->
 <section class="relative bg-cover bg-center h-[600px] flex items-center" style="background-image: url('images/chip8.jpeg');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Dark Overlay -->
@@ -209,6 +243,41 @@
     </div>
   </section>
   
+  <!-- Scroll Dot Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dotGroups = document.querySelectorAll('.scroll-dots');
+  
+      dotGroups.forEach(group => {
+        const targetId = group.getAttribute('data-target');
+        const scrollContainer = document.querySelector(`#${targetId} .flex.overflow-x-auto`);
+        const cards = scrollContainer?.querySelectorAll('.snap-center') || [];
+        const dots = [];
+  
+        // Create dots based on number of cards
+        cards.forEach((_, i) => {
+          const dot = document.createElement('span');
+          dot.className = `w-2 h-2 rounded-full transition-all bg-gray-300`;
+          if (i === 0) dot.classList.add('bg-gray-500'); // active
+          group.appendChild(dot);
+          dots.push(dot);
+        });
+  
+        // Scroll listener to update dots
+        scrollContainer?.addEventListener('scroll', () => {
+          const scrollLeft = scrollContainer.scrollLeft;
+          const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(scrollContainer).gap || 16);
+          const activeIndex = Math.round(scrollLeft / cardWidth);
+  
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('bg-gray-500', i === activeIndex);
+            dot.classList.toggle('bg-gray-300', i !== activeIndex);
+          });
+        });
+      });
+    });
+  </script>
+   
 <!-- Infographic-Style Timeline -->
 <section class="p-10 bg-gray-100 relative overflow-hidden">
     <h2 class="text-3xl font-bold text-gray-800 text-center">Your Product Journey</h2>
@@ -318,6 +387,24 @@
         </div>
     </div>
 </section>
+
+<!-- Add CSS to Handle Mobile and Desktop Background Styling -->
+<style>
+    /* Default Desktop Styles for SVG Background (Restored) */
+    .svg-bg {
+        transform: translateX(60%) /* Desktop scaling */
+    }
+
+    /* Mobile Adjustments (Kept from earlier) */
+    @media (max-width: 640px) {
+        .svg-bg {
+            transform: translateX(-50%) scale(1); /* Reset scale for mobile */
+            top: 0; /* Proper alignment */
+            left: 50%;
+            position: absolute; /* Mobile-specific position */
+        }
+    }
+</style>
 
     <!-- Portfolio Section -->
     <section  id="portfolio" class="py-12 px-4">
@@ -577,6 +664,7 @@
         &copy; 2025 UnityLan. All rights reserved.
     </div>
 </footer>
+
 
 <script src="script.js"></script>
 </body>

@@ -342,72 +342,7 @@ const elements = document.querySelectorAll('.fade-on-scroll');
     lazyBackgrounds.forEach(el => observer.observe(el));
   });
 
-  AOS.init({
+AOS.init({
     duration: 800,
     offset: 100,
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileMenuClose = document.getElementById("mobile-menu-close");
-
-    mobileMenuToggle.addEventListener("click", () => {
-        mobileMenu.style.transform = "translateX(0)";
-    });
-
-    mobileMenuClose.addEventListener("click", () => {
-        mobileMenu.style.transform = "translateX(100%)";
-    });
-
-    // Accordion functionality for Services in Drawer
-    const servicesHeading = document.getElementById("services-heading");
-    const servicesSubheadings = document.getElementById("services-subheadings");
-    const servicesIcon = servicesHeading.querySelector("svg");
-
-    servicesHeading.addEventListener('click', () => {
-        // Toggle the visibility of the subheadings
-        servicesSubheadings.classList.toggle('hidden');
-
-        // Toggle the arrow direction
-        if (servicesSubheadings.classList.contains('hidden')) {
-            servicesIcon.style.transform = "rotate(0deg)"; // Point down
-        } else {
-            servicesIcon.style.transform = "rotate(180deg)"; // Point up
-        }
-    });
-});
-
-// Scroll Dots for Carousel on mobile serivces
-document.addEventListener('DOMContentLoaded', () => {
-    const dotGroups = document.querySelectorAll('.scroll-dots');
-
-    dotGroups.forEach(group => {
-      const targetId = group.getAttribute('data-target');
-      const scrollContainer = document.querySelector(`#${targetId} .flex.overflow-x-auto`);
-      const cards = scrollContainer?.querySelectorAll('.snap-center') || [];
-      const dots = [];
-
-      // Create dots based on number of cards
-      cards.forEach((_, i) => {
-        const dot = document.createElement('span');
-        dot.className = `w-2 h-2 rounded-full transition-all bg-gray-300`;
-        if (i === 0) dot.classList.add('bg-gray-500'); // active
-        group.appendChild(dot);
-        dots.push(dot);
-      });
-
-      // Scroll listener to update dots
-      scrollContainer?.addEventListener('scroll', () => {
-        const scrollLeft = scrollContainer.scrollLeft;
-        const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(scrollContainer).gap || 16);
-        const activeIndex = Math.round(scrollLeft / cardWidth);
-
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('bg-gray-500', i === activeIndex);
-          dot.classList.toggle('bg-gray-300', i !== activeIndex);
-        });
-      });
-    });
   });
