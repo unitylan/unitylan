@@ -199,6 +199,49 @@ document.addEventListener("DOMContentLoaded", function() {
            }
        });
     });
+    
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+    const transitionDuration = 300; // ms, should match Tailwind's duration-300
+
+    if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
+        mobileMenuToggle.addEventListener("click", () => {
+            mobileMenu.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
+            mobileMenu.classList.add("translate-x-0", "opacity-100", "pointer-events-auto");
+        });
+
+        mobileMenuClose.addEventListener("click", () => {
+            // Start closing transition
+            mobileMenu.classList.remove("translate-x-0", "opacity-100", "pointer-events-auto");
+            mobileMenu.classList.add("translate-x-full");
+
+            // Wait for the slide transition to finish, then hide it completely
+            setTimeout(() => {
+                mobileMenu.classList.add("opacity-0", "pointer-events-none");
+            }, transitionDuration);
+        });
+    }
+
+    // Accordion functionality
+    const servicesHeading = document.getElementById("services-heading");
+    const servicesSubheadings = document.getElementById("services-subheadings");
+
+    if (servicesHeading && servicesSubheadings) {
+        const servicesIcon = servicesHeading.querySelector("svg");
+
+        servicesHeading.addEventListener('click', () => {
+            servicesSubheadings.classList.toggle('hidden');
+
+            if (servicesIcon) {
+                servicesIcon.style.transform = servicesSubheadings.classList.contains('hidden')
+                    ? "rotate(0deg)"
+                    : "rotate(180deg)";
+            }
+        });
+    }
 });
 
 function closePopup() {
@@ -346,47 +389,3 @@ AOS.init({
     duration: 800,
     offset: 100,
   });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileMenuClose = document.getElementById("mobile-menu-close");
-
-    const transitionDuration = 300; // ms, should match Tailwind's duration-300
-
-    if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
-        mobileMenuToggle.addEventListener("click", () => {
-            mobileMenu.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
-            mobileMenu.classList.add("translate-x-0", "opacity-100", "pointer-events-auto");
-        });
-
-        mobileMenuClose.addEventListener("click", () => {
-            // Start closing transition
-            mobileMenu.classList.remove("translate-x-0", "opacity-100", "pointer-events-auto");
-            mobileMenu.classList.add("translate-x-full");
-
-            // Wait for the slide transition to finish, then hide it completely
-            setTimeout(() => {
-                mobileMenu.classList.add("opacity-0", "pointer-events-none");
-            }, transitionDuration);
-        });
-    }
-
-    // Accordion functionality
-    const servicesHeading = document.getElementById("services-heading");
-    const servicesSubheadings = document.getElementById("services-subheadings");
-
-    if (servicesHeading && servicesSubheadings) {
-        const servicesIcon = servicesHeading.querySelector("svg");
-
-        servicesHeading.addEventListener('click', () => {
-            servicesSubheadings.classList.toggle('hidden');
-
-            if (servicesIcon) {
-                servicesIcon.style.transform = servicesSubheadings.classList.contains('hidden')
-                    ? "rotate(0deg)"
-                    : "rotate(180deg)";
-            }
-        });
-    }
-});
