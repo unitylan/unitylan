@@ -388,4 +388,5 @@ const elements = document.querySelectorAll('.fade-on-scroll');
 AOS.init({
     duration: 800,
     offset: 100,
+    once: true, // ensures animation happens only once per element
   });
