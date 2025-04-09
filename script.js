@@ -342,4 +342,7 @@ const elements = document.querySelectorAll('.fade-on-scroll');
     lazyBackgrounds.forEach(el => observer.observe(el));
   });
 
-
+  AOS.init({
+    duration: 800,
+    offset: 100,
+  });

@@ -9,6 +9,10 @@
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <!-- AOS CSS (in <head>) -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS (before </body>) -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body class="bg-gray-100">
@@ -163,29 +167,27 @@
 
 <!-- Add On Timeline -->
 <div class="container mx-auto px-6 py-12">
-  <div class="text-center mb-3">
+  <div class="text-center mb-8">
     <h1 class="text-3xl font-semibold text-gray-800">Add-On Services</h1>
     <p class="text-gray-600 mt-2">
       Enhance your website with valuable features designed to boost functionality, performance, and online presence.
     </p>
   </div>
 
-  <!-- Responsive Timeline for Add-On Services -->
-  <div class="relative flex flex-col md:block">
-    <!-- Vertical or Horizontal Line -->
-    <div class="absolute md:inset-y-1/2 md:left-0 md:w-full md:border-t-4 md:border-gray-600 
-                left-1/2 top-0 h-full border-l-4 border-gray-600 z-0 transform -translate-x-1/2 md:translate-x-0">
-    </div>
+  <!-- Timeline Container -->
+  <div class="relative flex flex-col md:flex-row">
+    <!-- Vertical Line for Mobile -->
+    <div class="absolute left-4 top-0 h-full border-l-4 border-gray-600 z-0 md:hidden"></div>
 
-    <ul class="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
-      <!-- Service 1 -->
-      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
-        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
-          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-check-circle text-xl"></i>
-          </div>
+    <ul class="flex flex-col md:flex-row w-full relative z-10">
+      <!-- Service Item -->
+      <li class="relative mb-12 md:mb-0 w-full md:w-1/6 flex md:flex-col items-start md:items-center" data-aos="fade-up">
+        <!-- Mobile Dot -->
+        <div class="absolute left-0 top-0 md:static md:mb-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center z-10">
+          <i class="fas fa-check-circle text-xl"></i>
         </div>
-        <div class="mt-12 md:mt-24 px-2">
+        <!-- Content -->
+        <div class="ml-12 md:ml-0 mt-2 md:mt-0 text-left md:text-center px-2">
           <h3 class="text-lg font-semibold">Domain Registration & Hosting</h3>
           <p class="text-sm text-gray-600 mt-1">
             We handle securing your domain name and provide fast, reliable hosting—so your business is always online and professional.
@@ -193,14 +195,11 @@
         </div>
       </li>
 
-      <!-- Service 2 -->
-      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
-        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
-          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-check-circle text-xl"></i>
-          </div>
+      <li class="relative mb-12 md:mb-0 w-full md:w-1/6 flex md:flex-col items-start md:items-center" data-aos="fade-up">
+        <div class="absolute left-0 top-0 md:static md:mb-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center z-10">
+          <i class="fas fa-check-circle text-xl"></i>
         </div>
-        <div class="mt-12 md:mt-20 px-2">
+        <div class="ml-12 md:ml-0 mt-2 md:mt-0 text-left md:text-center px-2">
           <h3 class="text-lg font-semibold">Additional Pages</h3>
           <p class="text-sm text-gray-600 mt-1">
             Need more sections like FAQs, Careers, or Testimonials? We’ll expand your site while maintaining consistency and flow.
@@ -208,14 +207,11 @@
         </div>
       </li>
 
-      <!-- Service 3 -->
-      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
-        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
-          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-check-circle text-xl"></i>
-          </div>
+      <li class="relative mb-12 md:mb-0 w-full md:w-1/6 flex md:flex-col items-start md:items-center" data-aos="fade-up">
+        <div class="absolute left-0 top-0 md:static md:mb-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center z-10">
+          <i class="fas fa-check-circle text-xl"></i>
         </div>
-        <div class="mt-12 md:mt-20 px-2">
+        <div class="ml-12 md:ml-0 mt-2 md:mt-0 text-left md:text-center px-2">
           <h3 class="text-lg font-semibold">Custom Design</h3>
           <p class="text-sm text-gray-600 mt-1">
             Tailor your website’s look to reflect your brand identity with a fully custom design approach—not a one-size-fits-all.
@@ -223,14 +219,11 @@
         </div>
       </li>
 
-      <!-- Service 4 -->
-      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
-        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
-          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-check-circle text-xl"></i>
-          </div>
+      <li class="relative mb-12 md:mb-0 w-full md:w-1/6 flex md:flex-col items-start md:items-center" data-aos="fade-up">
+        <div class="absolute left-0 top-0 md:static md:mb-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center z-10">
+          <i class="fas fa-check-circle text-xl"></i>
         </div>
-        <div class="mt-12 md:mt-24 px-2">
+        <div class="ml-12 md:ml-0 mt-2 md:mt-0 text-left md:text-center px-2">
           <h3 class="text-lg font-semibold">Social Media Integration</h3>
           <p class="text-sm text-gray-600 mt-1">
             We connect your site to social media platforms to boost visibility and engagement, making it easy for users to follow and share.
@@ -238,14 +231,11 @@
         </div>
       </li>
 
-      <!-- Service 5 -->
-      <li class="w-full md:w-1/6 text-center md:text-center relative mb-20 md:mb-0">
-        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
-          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-check-circle text-xl"></i>
-          </div>
+      <li class="relative mb-12 md:mb-0 w-full md:w-1/6 flex md:flex-col items-start md:items-center" data-aos="fade-up">
+        <div class="absolute left-0 top-0 md:static md:mb-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center z-10">
+          <i class="fas fa-check-circle text-xl"></i>
         </div>
-        <div class="mt-12 md:mt-24 px-2">
+        <div class="ml-12 md:ml-0 mt-2 md:mt-0 text-left md:text-center px-2">
           <h3 class="text-lg font-semibold">Database Implementation</h3>
           <p class="text-sm text-gray-600 mt-1">
             We add secure database support for storing client data, product listings, or form submissions—whatever your business needs.
@@ -253,14 +243,11 @@
         </div>
       </li>
 
-      <!-- Service 6 -->
-      <li class="w-full md:w-1/6 text-center md:text-center relative mb-8 md:mb-0">
-        <div class="timeline-icon absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 z-10">
-          <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center">
-            <i class="fas fa-check-circle text-xl"></i>
-          </div>
+      <li class="relative mb-8 md:mb-0 w-full md:w-1/6 flex md:flex-col items-start md:items-center" data-aos="fade-up">
+        <div class="absolute left-0 top-0 md:static md:mb-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center z-10">
+          <i class="fas fa-check-circle text-xl"></i>
         </div>
-        <div class="mt-12 md:mt-24 px-2">
+        <div class="ml-12 md:ml-0 mt-2 md:mt-0 text-left md:text-center px-2">
           <h3 class="text-lg font-semibold">Advanced SEO Services</h3>
           <p class="text-sm text-gray-600 mt-1">
             Improve your site’s search engine visibility with expert SEO strategies that help drive targeted traffic and conversions.
