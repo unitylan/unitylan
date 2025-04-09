@@ -372,4 +372,20 @@
       padding-bottom: 0.5rem;
     }
   }
+
+    /* Default Desktop Styles for SVG Background (Restored) */
+    .svg-bg {
+        transform: translateX(60%) /* Desktop scaling */
+    }
+
+    /* Mobile Adjustments (Kept from earlier) */
+    @media (max-width: 640px) {
+        .svg-bg {
+            transform: translateX(-50%) scale(1); /* Reset scale for mobile */
+            top: 0; /* Proper alignment */
+            left: 50%;
+            position: absolute; /* Mobile-specific position */
+        }
+    }
+
   
