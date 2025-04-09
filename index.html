@@ -390,14 +390,21 @@
 
 <!-- Add CSS to Handle Mobile and Desktop Background Styling -->
 <style>
-    
-    /* Mobile Adjustments */
+    /* Default Desktop Styles for SVG Background (Restored) */
+    .svg-bg {
+        transform: translateX(-50%) scale(1.6); /* Desktop scaling */
+        top: -12rem; /* Desktop position */
+        left: 50%; /* Center horizontally on desktop */
+        position: absolute; /* Position relative to the section */
+    }
+
+    /* Mobile Adjustments (Kept from earlier) */
     @media (max-width: 640px) {
         .svg-bg {
             transform: translateX(-50%) scale(1); /* Reset scale for mobile */
-            top: 0; /* Ensure proper alignment */
+            top: 0; /* Proper alignment */
             left: 50%;
-            position: absolute;
+            position: absolute; /* Mobile-specific position */
         }
     }
 </style>
