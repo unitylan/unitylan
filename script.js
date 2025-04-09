@@ -179,8 +179,8 @@ document.addEventListener("DOMContentLoaded", function() {
        // prevBtn.innerHTML = "‹";
        // prevBtn.classList.add("absolute", "left-2", "top-1/2", "transform", "-translate-y-1/2", "bg-gray-800", "text-white", "p-2", "rounded-full", "shadow-md", "cursor-pointer", "z-10");
 
-        tab.appendChild(nextBtn);
-        tab.appendChild(prevBtn);
+        //tab.appendChild(nextBtn);
+        //tab.appendChild(prevBtn);
 
         nextBtn.addEventListener("click", () => {
             carousel.scrollBy({ left: 300, behavior: "smooth" });
@@ -346,3 +346,38 @@ AOS.init({
     duration: 800,
     offset: 100,
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuClose = document.getElementById("mobile-menu-close");
+
+    if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
+        mobileMenuToggle.addEventListener("click", () => {
+            mobileMenu.style.transform = "translateX(0)";
+        });
+
+        mobileMenuClose.addEventListener("click", () => {
+            mobileMenu.style.transform = "translateX(100%)";
+        });
+    }
+
+    // Accordion functionality for Services in Drawer
+    const servicesHeading = document.getElementById("services-heading");
+    const servicesSubheadings = document.getElementById("services-subheadings");
+
+    if (servicesHeading && servicesSubheadings) {
+        const servicesIcon = servicesHeading.querySelector("svg");
+
+        servicesHeading.addEventListener('click', () => {
+            servicesSubheadings.classList.toggle('hidden');
+
+            if (servicesIcon) {
+                servicesIcon.style.transform = servicesSubheadings.classList.contains('hidden')
+                    ? "rotate(0deg)"
+                    : "rotate(180deg)";
+            }
+        });
+    }
+});
