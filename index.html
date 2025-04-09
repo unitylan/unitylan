@@ -351,8 +351,8 @@
 <!-- Section Separator with Tech-Inspired Spaced-Out Hexagonal Background -->
 <section class="relative py-10 sm:py-16 bg-white text-gray-900 sm:[width:calc(100%-150px)] sm:mx-auto w-full max-h-[600px] sm:max-h-none overflow-hidden" style="border-radius: 50px;">
     <!-- SVG Background -->
-    <div class="absolute inset-0 w-full h-full opacity-20 sm:scale-100 scale-[1.6] -top-12 sm:top-0 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:translate-y-0">
-        <svg class="w-full h-full origin-top-left sm:scale-100 scale-[0.7] sm:scale-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <div class="absolute inset-0 w-full h-full opacity-20 svg-bg">
+        <svg class="w-full h-full origin-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <defs>
                 <pattern id="hexPattern" width="100" height="86" patternUnits="userSpaceOnUse"
                          patternTransform="translate(50,0)">
@@ -387,6 +387,25 @@
         </div>
     </div>
 </section>
+
+<!-- Add CSS to Handle Mobile and Desktop Background Styling -->
+<style>
+    /* Default Desktop Styles for SVG Background */
+    .svg-bg {
+        transform: translateX(-50%) scale(1.6);
+        top: -12rem;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 640px) {
+        .svg-bg {
+            transform: translateX(-50%) scale(1); /* Reset scale for mobile */
+            top: 0; /* Ensure proper alignment */
+            left: 50%;
+            position: absolute;
+        }
+    }
+</style>
 
     <!-- Portfolio Section -->
     <section  id="portfolio" class="py-12 px-4">
