@@ -348,18 +348,21 @@ AOS.init({
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Mobile Menu Toggle
     const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const mobileMenuClose = document.getElementById("mobile-menu-close");
 
+    // Show mobile menu
     if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
         mobileMenuToggle.addEventListener("click", () => {
-            mobileMenu.style.transform = "translateX(0)";
+            mobileMenu.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
+            mobileMenu.classList.add("translate-x-0", "opacity-100", "pointer-events-auto");
         });
 
+        // Hide mobile menu
         mobileMenuClose.addEventListener("click", () => {
-            mobileMenu.style.transform = "translateX(100%)";
+            mobileMenu.classList.remove("translate-x-0", "opacity-100", "pointer-events-auto");
+            mobileMenu.classList.add("translate-x-full", "opacity-0", "pointer-events-none");
         });
     }
 
