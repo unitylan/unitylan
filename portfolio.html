@@ -184,49 +184,49 @@
     </div>
 </section>
 
-        <!-- FAQ section -->
-        <section class="faq-section p-10 bg-gray-100 text-center flex">
-            <!-- Left Aligned FAQ Navigation -->
-            <div class="w-1/4 p-6">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">FAQ Navigation</h3>
-                <div class="space-y-4">
-                    <!-- Web Development FAQ Button -->
-                    <button 
-                        id="web-dev-btn" 
-                        class="faq-btn w-full p-4 text-gray-800 font-semibold text-lg rounded-lg shadow-md"
-                        onclick="showFAQContent('web-dev', this)">
-                        Web Development FAQ
-                    </button>
-        
-                    <!-- E-Commerce FAQ Button -->
-                    <button 
-                        id="ecom-btn" 
-                        class="faq-btn w-full p-4 text-gray-800 font-semibold text-lg rounded-lg shadow-md"
-                        onclick="showFAQContent('ecom', this)">
-                        E-Commerce FAQ
-                    </button>
-                </div>
+<!-- FAQ section -->
+<section class="faq-section p-10 bg-gray-100 text-center flex flex-col sm:flex-row">
+    <!-- Left Aligned FAQ Navigation -->
+    <div class="w-full sm:w-1/4 p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">FAQ Navigation</h3>
+        <div class="space-y-4">
+            <!-- Web Development FAQ Button -->
+            <button 
+                id="web-dev-btn" 
+                class="faq-btn w-full p-4 text-gray-800 font-semibold text-lg rounded-lg shadow-md"
+                onclick="showFAQContent('web-dev', this)">
+                Web Development FAQ
+            </button>
+
+            <!-- E-Commerce FAQ Button -->
+            <button 
+                id="ecom-btn" 
+                class="faq-btn w-full p-4 text-gray-800 font-semibold text-lg rounded-lg shadow-md"
+                onclick="showFAQContent('ecom', this)">
+                E-Commerce FAQ
+            </button>
+        </div>
+    </div>
+
+    <!-- Right Aligned FAQ Content -->
+    <div class="w-full sm:w-3/4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+        <!-- Web Development FAQ Content -->
+        <div id="web-dev" class="faq-content hidden">
+            <div id="web-dev-faqs" class="mt-6 max-w-4xl mx-auto text-left">
+                <!-- FAQ content will be rendered dynamically here -->
             </div>
-        
-            <!-- Right Aligned FAQ Content -->
-            <div class="w-3/4">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
-        
-                <!-- Web Development FAQ Content -->
-                <div id="web-dev" class="faq-content hidden">
-                    <div id="web-dev-faqs" class="mt-6 max-w-4xl mx-auto text-left">
-                        <!-- FAQ content will be rendered dynamically here -->
-                    </div>
-                </div>
-        
-                <!-- E-Commerce FAQ Content -->
-                <div id="ecom" class="faq-content hidden">
-                    <div id="ecom-faqs" class="mt-6 max-w-4xl mx-auto text-left">
-                        <!-- FAQ content will be rendered dynamically here -->
-                    </div>
-                </div>
+        </div>
+
+        <!-- E-Commerce FAQ Content -->
+        <div id="ecom" class="faq-content hidden">
+            <div id="ecom-faqs" class="mt-6 max-w-4xl mx-auto text-left">
+                <!-- FAQ content will be rendered dynamically here -->
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 <!-- Contact Section -->
 <section class="cta-section">
