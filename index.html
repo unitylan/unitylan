@@ -578,6 +578,51 @@
     </div>
 </section>
 
+ <!-- Cookie Popup -->
+ <div id="cookiePopup" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:bottom-8 max-w-sm bg-white text-gray-800 shadow-xl rounded-2xl p-4 z-50 transition-transform duration-300 transform translate-y-0">
+    <div class="flex flex-col gap-2">
+      <p class="text-sm font-medium">
+        We use cookies to improve your experience. By using our site, you agree to our use of cookies.
+      </p>
+      <div class="flex justify-end gap-2">
+        <button id="acceptCookies" class="px-4 py-1 text-sm bg-blue-600 text-white rounded-xl hover:bg-blue-700">
+          Accept
+        </button>
+        <button id="declineCookies" class="px-4 py-1 text-sm bg-gray-600 text-white rounded-xl hover:bg-gray-700">
+          Decline
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if the user has already made a choice about cookies
+      const cookiePopup = document.getElementById('cookiePopup');
+      const acceptButton = document.getElementById('acceptCookies');
+      const declineButton = document.getElementById('declineCookies');
+
+      // Show the popup if the user hasn't accepted or declined cookies
+      if (!localStorage.getItem('cookieChoice')) {
+        cookiePopup.style.display = 'block';
+      }
+
+      // If the user accepts cookies, store their choice and hide the popup
+      acceptButton.addEventListener('click', () => {
+        localStorage.setItem('cookieChoice', 'accepted');
+        cookiePopup.style.display = 'none';
+      });
+
+      // If the user declines cookies, store their choice and hide the popup
+      declineButton.addEventListener('click', () => {
+        localStorage.setItem('cookieChoice', 'declined');
+        cookiePopup.style.display = 'none';
+      });
+    });
+  </script>
+
+
 <!-- Contact Section -->
 <section class="cta-section">
     <div class="cta-container">
