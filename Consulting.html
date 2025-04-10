@@ -16,16 +16,21 @@
     <div class="w-full max-w-7xl mx-auto flex justify-between items-center px-4">
         <!-- Business Logo -->
         <a href="index.html" class="h-full flex items-center">
-            <img id="logo" src="_images/logo2.png" alt="Business Logo" class="w-[270px] max-h-full object-contain">
+            <img id="logo" src="images/logo2.png" alt="Business Logo" class="w-[270px] max-h-full object-contain">
         </a>
-
-        <!-- Navigation -->
-        <nav>
-            <ul class="flex space-x-6 font-semibold items-center">
+  
+        <!-- Desktop Navigation (Restored Original with Right Aligned) -->
+        <nav class="lg:flex flex-1 items-center hidden">
+            <ul class="flex space-x-6 font-semibold items-center ml-auto">
                 <li><a href="index.html" class="text-white nav-link">Home</a></li>
-                <li class="relative group">
-                    <!-- Service Dropdown Menu -->
-                    <a href="#" class="text-white nav-link">Services</a>
+                <li class="relative group flex items-center">
+                    <!-- Service Dropdown Menu with Dropdown Icon -->
+                    <a href="#" class="text-white nav-link flex items-center">
+                        Services 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
                     <ul class="absolute left-0 hidden mt-2 bg-white text-black shadow-lg rounded-lg w-48 space-y-2 py-2 z-10 group-hover:block">
                         <li><a href="services.html" class="block px-4 py-2 dropdown-link transition">Web Development</a></li>
                         <li><a href="ecommerce.html" class="block px-4 py-2 dropdown-link transition">E-commerce</a></li>
@@ -34,11 +39,55 @@
                 </li>
                 <li><a href="portfolio.html" class="text-white nav-link">Portfolio</a></li>
                 <li><a href="about.html" class="text-white nav-link">About Us</a></li>
+  
                 <li class="ml-auto pl-12">
-                    <a href="contact.html" class="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-600 transition">Contact</a>
+                    <a href="contact.html" class="bg-blue-500 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-600 transition">Contact</a>
                 </li>
             </ul>
         </nav>
+  
+        <!-- Mobile Drawer Button (Increased size) -->
+        <button id="mobile-menu-toggle" class="lg:hidden text-white p-3 nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+  
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="lg:hidden fixed top-0 right-0 w-[80%] h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 opacity-0 pointer-events-none">
+      <div class="flex justify-end p-4">
+            <button id="mobile-menu-close" class="text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="px-4 py-6">
+            <ul class="space-y-6 font-semibold text-black">
+                <li><a href="index.html" class="block">Home</a></li>
+                
+                <!-- Services Accordion with Subheadings -->
+                <li class="relative">
+                    <div class="flex items-center justify-between cursor-pointer" id="services-heading">
+                        <a href="#" class="block">Services</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </div>
+                    <!-- Service subheadings (hidden by default) -->
+                    <ul id="services-subheadings" class="accordion-content hidden space-y-2 pl-4 mt-2">
+                        <li><a href="services.html" class="block">Web Development</a></li>
+                        <li><a href="ecommerce.html" class="block">E-commerce</a></li>
+                        <li><a href="Consulting.html" class="block">Consulting</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="portfolio.html" class="block">Portfolio</a></li>
+                <li><a href="about.html" class="block">About Us</a></li>
+                <li><a href="contact.html" class="block">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </header>
 
@@ -115,64 +164,71 @@
 <!-- Footer -->
 <footer class="bg-white text-gray-800 p-10 mt-0">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-        <!-- Company Info -->
-        <div class="flex flex-col items-center md:items-start">
-            <img src="_images/logo2.png" alt="IT Solutions Logo" class="w-[200px] max-h-full object-contain">
-        </div>
-
+  
+  <!-- Company Info & Social (mobile horizontal only) -->
+  <div class="flex flex-col md:items-start">
+    <!-- Mobile-only horizontal layout -->
+    <div class="flex items-center justify-between w-full md:hidden">
+        <!-- Logo -->
+        <img src="images/logo2.png" alt="IT Solutions Logo" class="w-[150px] max-h-full object-contain">
+  
+        <!-- Social Media (mobile only) -->
+        <div class="flex space-x-4 text-gray-600 text-xl">
+            <a href="#" class="hover:text-gray-900 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-gray-900 transition"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-gray-900 transition"><i class="fab fa-x-twitter"></i></a>
+        </div>    
+    </div>
+  
+    <!-- Logo for desktop -->
+    <div class="hidden md:block">
+        <img src="images/logo2.png" alt="IT Solutions Logo" class="w-[200px] max-h-full object-contain">
+    </div>
+  
+    <!-- Divider (mobile only) -->
+    <hr class="border-t border-gray-300 w-full mt-4 md:hidden">
+  </div>
+  
         <!-- Quick Links -->
         <div>
             <h3 class="text-lg font-semibold">Company</h3>
             <ul class="text-sm text-gray-600 space-y-2 mt-3">
+                <li><a href="index.html" class="hover:text-gray-900">Home</a></li>
                 <li><a href="about.html" class="hover:text-gray-900">About Us</a></li>
                 <li><a href="portfolio.html" class="hover:text-gray-900">Portfolio</a></li>
                 <li><a href="contact.html" class="hover:text-gray-900">Contact</a></li>
             </ul>
         </div>
-
+  
         <!-- Services -->
         <div>
             <h3 class="text-lg font-semibold">Services</h3>
             <ul class="text-sm text-gray-600 space-y-2 mt-3">
                 <li><a href="services.html" class="hover:text-gray-900">Web Development</a></li>
                 <li><a href="ecommerce.html" class="hover:text-gray-900">E-commerce</a></li>
-                <li><a href="consulting.html" class="hover:text-gray-900">IT Consulting</a></li>
+                <li><a href="Consulting.html" class="hover:text-gray-900">IT Consulting</a></li>
             </ul>
         </div>
-
+  
         <!-- Contact Info -->
         <div>
             <h3 class="text-lg font-semibold">Contact Us</h3>
-            <p class="text-sm text-gray-600 mt-3">Email: support@itsolutions.com</p>
             <p class="text-sm text-gray-600">Phone: +1 (123) 456-7890</p>
             <a href="mailto:support@itsolutions.com" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
                 Email Us
             </a>
-
-            <!-- Social Media Links -->
-            <div class="mt-4">
+  
+            <!-- Social Media Links (Desktop Only) -->
+            <div class="mt-4 hidden md:block">
                 <h3 class="text-lg font-semibold">Follow Us</h3>
                 <div class="flex justify-center md:justify-start space-x-4 mt-2">
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
-                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2h2v-1.5c0-2 1.2-3 3-3 .9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 2h-1.9v7A10 10 0 0 0 22 12z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
-                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                            <path d="M8 19c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7zm-1-10h2v6H7v-6zm1-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9 12h-2v-3c0-2-1-2-1-2s-1 0-1 2v3h-2v-6h2v1s1-1 3-1 3 1 3 4v3z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition">
-                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                            <path d="M19 3h-3a5 5 0 0 0-5 5v3H8v4h3v8h4v-8h3l1-4h-4V8c0-1 0-2 2-2h2V3z"/>
-                        </svg>
-                    </a>
-                </div>
+                    <a href="#" class="hover:text-gray-900 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gray-900 transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-gray-900 transition"><i class="fab fa-x-twitter"></i></a>                </div>
             </div>
         </div>
     </div>
-
+  
     <!-- Copyright -->
     <div class="text-center text-sm text-gray-600 border-t border-gray-300 mt-6 pt-4">
         &copy; 2025 UnityLan. All rights reserved.
