@@ -111,47 +111,52 @@
     </div>
 </section>
 
-     <!-- Portfolio Section -->
-     <section id="portfolio" class="p-10 text-center bg-gray-200">
-        <h2 class="text-3xl font-bold text-gray-800">Featured Projects</h2>
-        <div class="mt-4 flex justify-center space-x-4">
-            <button id="all-btn" class="filter-btn bg-blue-600 text-white px-5 py-2 rounded-full shadow-lg transform transition hover:scale-110" onclick="filterPortfolio('all')">All</button>
-            <button id="ecommerce-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('ecommerce')">E-commerce</button>
-            <button id="agriculture-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('agriculture')">Agriculture</button>
-            <button id="construction-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('construction')">Construction</button>
-            <button id="transportation-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('transportation')">Transportation</button>
-        </div>
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="portfolio-item ecommerce bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project1')">
-                <img src="images/work5.webp" alt="E-commerce Project" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold">E-commerce Platform</h3>
-                    <p class="text-gray-600 mt-2">An advanced online store.</p>
-                </div>
-            </div>
-            <div class="portfolio-item agriculture bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project2')">
-                <img src="images/work6.webp" alt="Farming Website" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold">Farming Management</h3>
-                    <p class="text-gray-600 mt-2">A platform for farm logistics.</p>
-                </div>
-            </div>
-            <div class="portfolio-item transportation bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project3')">
-                <img src="images/work6.webp" alt="Farming Website" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold">Farming Management</h3>
-                    <p class="text-gray-600 mt-2">A platform for farm logistics.</p>
-                </div>
-            </div>
-            <div class="portfolio-item construction bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project4')">
-                <img src="images/work6.webp" alt="Farming Website" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold">Farming Management</h3>
-                    <p class="text-gray-600 mt-2">A platform for farm logistics.</p>
-                </div>
+<!-- Portfolio Section -->
+<section id="portfolio" class="p-10 text-center bg-gray-200">
+    <h2 class="text-3xl font-bold text-gray-800">Featured Projects</h2>
+    
+    <!-- Make button container scrollable on small screens -->
+    <div class="mt-4 flex flex-wrap justify-center gap-2 sm:space-x-4 sm:flex-nowrap sm:overflow-x-auto">
+        <button id="all-btn" class="filter-btn bg-blue-600 text-white px-5 py-2 rounded-full shadow-lg transform transition hover:scale-110" onclick="filterPortfolio('all')">All</button>
+        <button id="ecommerce-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('ecommerce')">E-commerce</button>
+        <button id="agriculture-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('agriculture')">Agriculture</button>
+        <button id="construction-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('construction')">Construction</button>
+        <button id="transportation-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('transportation')">Transportation</button>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Portfolio Items -->
+        <div class="portfolio-item ecommerce bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project1')">
+            <img src="images/work5.webp" alt="E-commerce Project" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold">E-commerce Platform</h3>
+                <p class="text-gray-600 mt-2">An advanced online store.</p>
             </div>
         </div>
-    </section>
+        <div class="portfolio-item agriculture bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project2')">
+            <img src="images/work6.webp" alt="Farming Website" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold">Farming Management</h3>
+                <p class="text-gray-600 mt-2">A platform for farm logistics.</p>
+            </div>
+        </div>
+        <div class="portfolio-item transportation bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project3')">
+            <img src="images/work6.webp" alt="Farming Website" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold">Farming Management</h3>
+                <p class="text-gray-600 mt-2">A platform for farm logistics.</p>
+            </div>
+        </div>
+        <div class="portfolio-item construction bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project4')">
+            <img src="images/work6.webp" alt="Farming Website" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold">Farming Management</h3>
+                <p class="text-gray-600 mt-2">A platform for farm logistics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     
 <!-- Why Us Section -->
 <section id="why-us" class="p-12 bg-white text-center">
