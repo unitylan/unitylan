@@ -388,4 +388,19 @@
         }
     }
 
+
+#cookiePopup {
+    left: 4px; 
+    right: 4px;
+    bottom: 4px;
+  }
+  
+  @media (min-width: 768px) {
+    #cookiePopup {
+      left: auto;
+      right: 8px;
+      bottom: 8px;
+    }
+  }
+
   
