@@ -388,3 +388,27 @@ AOS.init({
     offset: 100,
     once: true, // ensures animation happens only once per element
   });
+
+  //infographic animation
+  module.exports = {
+    theme: {
+      extend: {
+        keyframes: {
+          fadeInLeft: {
+            '0%': { opacity: '0', transform: 'translateX(-40px)' },
+            '100%': { opacity: '1', transform: 'translateX(0)' },
+          },
+          fadeInRight: {
+            '0%': { opacity: '0', transform: 'translateX(40px)' },
+            '100%': { opacity: '1', transform: 'translateX(0)' },
+          },
+        },
+        animation: {
+          'fade-in-left': 'fadeInLeft 0.8s ease-out both',
+          'fade-in-right': 'fadeInRight 0.8s ease-out both',
+        },
+      },
+    },
+    plugins: [],
+  }
+  
