@@ -351,69 +351,8 @@
     </div>
 </section>
 
-<!-- Section Separator with Tech-Inspired Spaced-Out Hexagonal Background -->
-<section class="relative py-10 sm:py-16 bg-white text-gray-900 sm:[width:calc(100%-150px)] sm:mx-auto w-full max-h-[600px] sm:max-h-none overflow-hidden" style="border-radius: 50px;">
-    <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-700 rounded-full opacity-20 animate-float"></div>
-    <div class="absolute bottom-1/3 right-1/3 w-24 h-24 bg-indigo-700 rounded-full opacity-20 animate-float-delayed"></div>
-
-    <!-- SVG Background -->
-    <div class="absolute inset-0 w-full h-full opacity-20 svg-bg">
-        <svg class="w-full h-full origin-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <defs>
-                <pattern id="hexPattern" width="100" height="86" patternUnits="userSpaceOnUse"
-                         patternTransform="translate(50,0)">
-                    <polygon points="50,0 100,25 100,61 50,86 0,61 0,25"
-                             fill="none" stroke="black" stroke-width="1"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#hexPattern)"/>
-        </svg>
-    </div>
-
-    <!-- Centered Container with Border -->
-    <div class="relative max-w-6xl mx-auto border-t-2 border-b-2 border-gray-400 px-4">
-        <div class="flex flex-row items-center justify-between gap-4">
-            <!-- Left-Aligned Content -->
-            <div class="flex-1 min-w-0">
-                <h2 class="sm:text-3xl text-sm font-semibold text-gray-800 leading-snug sm:leading-normal">
-                    Discover what we can do for you
-                </h2>
-                <p class="sm:text-lg text-xs text-gray-700 mt-1 sm:mt-2 leading-snug sm:leading-relaxed">
-                    Driven by a passion for innovation, our team is committed to providing our clients with the most innovative and powerful development solutions in the industry.
-                </p>
-            </div>
-
-            <!-- Right-Aligned Button -->
-            <div class="flex-shrink-0">
-                <a href="contact.html"
-                   class="inline-block bg-blue-500 text-white text-xs sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300 text-center whitespace-nowrap">
-                    Reach Out
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Add CSS to Handle Mobile and Desktop Background Styling -->
-<style>
-    /* Default Desktop Styles for SVG Background (Restored) */
-    .svg-bg {
-        transform: translateX(60%) /* Desktop scaling */
-    }
-
-    /* Mobile Adjustments (Kept from earlier) */
-    @media (max-width: 640px) {
-        .svg-bg {
-            transform: translateX(-50%) scale(1); /* Reset scale for mobile */
-            top: 0; /* Proper alignment */
-            left: 50%;
-            position: absolute; /* Mobile-specific position */
-        }
-    }
-</style>
-
-    <!-- Portfolio Section -->
-    <section  id="portfolio" class="py-12 px-4">
+<!-- Portfolio Section -->
+    <section  id="portfolio" class="py-12 px-4 bg-gray-50">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold text-gray-800 text-center">Featured Projects</h2>
             <p class="text-gray-600 text-center mt-3 text-sm">
