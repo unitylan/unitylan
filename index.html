@@ -412,18 +412,11 @@
     <!-- Portfolio Section -->
     <section  id="portfolio" class="py-12 px-4">
         <div class="max-w-7xl mx-auto">
-            <!-- Heading and Browse All Button Row -->
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-3xl font-semibold text-gray-800">Portfolio</h2>
-                <a href="#" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors">
-                    Browse All
-                    <!-- Right Arrow Icon -->
-                    <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                </a>
-            </div>
-
+            <h2 class="text-3xl font-bold text-gray-800 text-center">Featured Projects</h2>
+            <p class="text-gray-600 text-center mt-3 text-sm">
+                Discover how we've helped businesses transform their digital presence
+            </p>
+        
                 <!-- Bento Grid Layout with 3 Items -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Portfolio Item 1 (Light Theme) -->
@@ -645,7 +638,7 @@
                             </svg>
                         </a>
                         <a href="portfolio.html" class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-gray-100 text-gray-900 rounded-xl text-base md:text-lg font-semibold hover:bg-gray-200 transition-all transform hover:scale-105">
-                            View Case Studies
+                            View Portfolio
                             <svg class="ml-2 w-4 h-4 md:w-5 md:h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
@@ -656,46 +649,51 @@
 
             <!-- Right Content -->
             <div class="relative order-1 lg:order-2">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 md:p-8 shadow-xl">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 md:p-8 shadow-xl relative overflow-hidden">
+                    <!-- Background Image with Overlay -->
                     <div class="absolute inset-0 z-0">
-                        <img src="images/form.webp" alt="Background" class="w-full h-full object-cover opacity-20">
+                        <img src="images/chip8.jpeg" alt="Background" class="w-full h-full object-cover opacity-20">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-700/20"></div>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                                <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
+                    <!-- Content -->
+                    <div class="relative z-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                            <div class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-sm">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Fast Delivery</h3>
+                                <p class="text-xs md:text-sm text-gray-600">Quick turnaround times without compromising quality</p>
                             </div>
-                            <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Fast Delivery</h3>
-                            <p class="text-xs md:text-sm text-gray-600">Quick turnaround times without compromising quality</p>
-                        </div>
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                                <svg class="w-5 h-5 md:w-6 md:h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
+                            <div class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-sm">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Secure Solutions</h3>
+                                <p class="text-xs md:text-sm text-gray-600">Enterprise-grade security for your peace of mind</p>
                             </div>
-                            <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Secure Solutions</h3>
-                            <p class="text-xs md:text-sm text-gray-600">Enterprise-grade security for your peace of mind</p>
-                        </div>
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                                <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                                </svg>
+                            <div class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-sm">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Custom Solutions</h3>
+                                <p class="text-xs md:text-sm text-gray-600">Tailored to your specific business needs</p>
                             </div>
-                            <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Custom Solutions</h3>
-                            <p class="text-xs md:text-sm text-gray-600">Tailored to your specific business needs</p>
-                        </div>
-                        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-                            <div class="w-10 h-10 md:w-12 md:h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                                <svg class="w-5 h-5 md:w-6 md:h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                                </svg>
+                            <div class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-sm">
+                                <div class="w-10 h-10 md:w-12 md:h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Expert Team</h3>
+                                <p class="text-xs md:text-sm text-gray-600">Dedicated professionals at your service</p>
                             </div>
-                            <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Expert Team</h3>
-                            <p class="text-xs md:text-sm text-gray-600">Dedicated professionals at your service</p>
                         </div>
                     </div>
                 </div>
@@ -777,7 +775,6 @@
         &copy; 2025 UnityLan. All rights reserved.
     </div>
 </footer>
-
 
 <script src="script.js"></script>
 </body>
