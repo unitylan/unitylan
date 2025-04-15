@@ -393,15 +393,15 @@
 .geometric-heading {
     position: relative;
     display: inline-block;
-    font-size: clamp(1.25rem, 3vw, 2.5rem); /* More conservative font size scaling */
+    font-size: clamp(1.25rem, 3vw, 2.5rem);
     font-weight: 500;
     color: #1a1a1a;
     padding: 0.5rem 1rem;
     text-align: center;
     margin: 0 auto;
     line-height: 1.2;
-    max-width: 100%; /* Prevent overflow */
-    box-sizing: border-box; /* Include padding in width calculation */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .geometric-heading::before {
@@ -409,7 +409,7 @@
     position: absolute;
     top: -5px;
     left: -5px;
-    width: clamp(12px, 2.5vw, 20px); /* Smaller geometric elements */
+    width: clamp(12px, 2.5vw, 20px);
     height: clamp(12px, 2.5vw, 20px);
     border-top: 2px solid #1a1a1a;
     border-left: 2px solid #1a1a1a;
@@ -421,7 +421,7 @@
     position: absolute;
     bottom: -5px;
     right: -5px;
-    width: clamp(12px, 2.5vw, 20px); /* Smaller geometric elements */
+    width: clamp(12px, 2.5vw, 20px);
     height: clamp(12px, 2.5vw, 20px);
     border-bottom: 2px solid #1a1a1a;
     border-right: 2px solid #1a1a1a;
@@ -430,7 +430,7 @@
 
 .geometric-heading:hover::before,
 .geometric-heading:hover::after {
-    width: clamp(15px, 3vw, 30px); /* Smaller hover size */
+    width: clamp(15px, 3vw, 30px);
     height: clamp(15px, 3vw, 30px);
 }
 
@@ -440,21 +440,21 @@
     justify-content: center;
     width: 100%;
     margin-bottom: clamp(0.5rem, 2vw, 1rem);
-    padding: 0 0.5rem; /* Reduced padding */
-    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 0 0.5rem;
+    box-sizing: border-box;
 }
 
 /* Responsive adjustments for geometric headings */
 @media (max-width: 768px) {
     .geometric-heading {
-        font-size: clamp(1.25rem, 2.5vw, 2rem); /* Smaller font size on tablets */
+        font-size: clamp(1.25rem, 2.5vw, 2rem);
         padding: 0.4rem 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .geometric-heading {
-        font-size: clamp(1.1rem, 2vw, 1.5rem); /* Even smaller font size on phones */
+        font-size: 1.7rem;
         padding: 0.3rem 0.6rem;
     }
     
