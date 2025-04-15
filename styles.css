@@ -389,15 +389,16 @@
     }
 
 
-    /* Geometric Accent Design */
+/* Geometric Accent Design */
 .geometric-heading {
     position: relative;
     display: inline-block;
     font-size: 2.5rem;
     font-weight: 500;
-    text-align: center;
     color: #1a1a1a;
     padding: 0.5rem 1rem;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .geometric-heading::before {
@@ -430,12 +431,16 @@
     height: 30px;
 }
 
-/* Responsive adjustments for new headings */
+/* Container for centered geometric headings */
+.geometric-heading-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for geometric headings */
 @media (max-width: 640px) {
-    .minimalist-heading,
-    .subtle-spacing-heading,
-    .clean-typography-heading,
-    .modern-serif-heading,
     .geometric-heading {
         font-size: 2rem;
     }
