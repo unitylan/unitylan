@@ -387,3 +387,55 @@
             position: absolute; /* Mobile-specific position */
         }
     }
+
+
+    /* Geometric Accent Design */
+.geometric-heading {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+}
+
+.geometric-heading::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid #1a1a1a;
+    border-left: 2px solid #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.geometric-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid #1a1a1a;
+    border-right: 2px solid #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.geometric-heading:hover::before,
+.geometric-heading:hover::after {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive adjustments for new headings */
+@media (max-width: 640px) {
+    .minimalist-heading,
+    .subtle-spacing-heading,
+    .clean-typography-heading,
+    .modern-serif-heading,
+    .geometric-heading {
+        font-size: 2rem;
+    }
+}
