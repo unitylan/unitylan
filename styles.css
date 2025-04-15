@@ -393,13 +393,15 @@
 .geometric-heading {
     position: relative;
     display: inline-block;
-    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+    font-size: clamp(1.25rem, 3vw, 2.5rem); /* More conservative font size scaling */
     font-weight: 500;
     color: #1a1a1a;
     padding: 0.5rem 1rem;
     text-align: center;
     margin: 0 auto;
-    line-height: 1.2; /* Better line height for smaller screens */
+    line-height: 1.2;
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .geometric-heading::before {
@@ -407,8 +409,8 @@
     position: absolute;
     top: -5px;
     left: -5px;
-    width: clamp(15px, 3vw, 20px); /* Responsive size */
-    height: clamp(15px, 3vw, 20px); /* Responsive size */
+    width: clamp(12px, 2.5vw, 20px); /* Smaller geometric elements */
+    height: clamp(12px, 2.5vw, 20px);
     border-top: 2px solid #1a1a1a;
     border-left: 2px solid #1a1a1a;
     transition: all 0.3s ease;
@@ -419,8 +421,8 @@
     position: absolute;
     bottom: -5px;
     right: -5px;
-    width: clamp(15px, 3vw, 20px); /* Responsive size */
-    height: clamp(15px, 3vw, 20px); /* Responsive size */
+    width: clamp(12px, 2.5vw, 20px); /* Smaller geometric elements */
+    height: clamp(12px, 2.5vw, 20px);
     border-bottom: 2px solid #1a1a1a;
     border-right: 2px solid #1a1a1a;
     transition: all 0.3s ease;
@@ -428,8 +430,8 @@
 
 .geometric-heading:hover::before,
 .geometric-heading:hover::after {
-    width: clamp(20px, 4vw, 30px); /* Responsive hover size */
-    height: clamp(20px, 4vw, 30px); /* Responsive hover size */
+    width: clamp(15px, 3vw, 30px); /* Smaller hover size */
+    height: clamp(15px, 3vw, 30px);
 }
 
 /* Container for centered geometric headings */
@@ -437,30 +439,36 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: clamp(0.5rem, 2vw, 1rem); /* Responsive margin */
-    padding: 0 1rem; /* Add padding for better spacing on mobile */
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    padding: 0 0.5rem; /* Reduced padding */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Responsive adjustments for geometric headings */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .geometric-heading {
-        padding: 0.3rem 0.8rem; /* Reduced padding on mobile */
-    }
-    
-    .geometric-heading::before,
-    .geometric-heading::after {
-        border-width: 1.5px; /* Thinner borders on mobile */
+        font-size: clamp(1.25rem, 2.5vw, 2rem); /* Smaller font size on tablets */
+        padding: 0.4rem 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .geometric-heading {
-        padding: 0.2rem 0.6rem; /* Even smaller padding on very small screens */
+        font-size: clamp(1.1rem, 2vw, 1.5rem); /* Even smaller font size on phones */
+        padding: 0.3rem 0.6rem;
     }
     
     .geometric-heading::before,
     .geometric-heading::after {
-        border-width: 1px; /* Thinnest borders on very small screens */
+        border-width: 1px;
+        width: clamp(8px, 2vw, 15px);
+        height: clamp(8px, 2vw, 15px);
+    }
+    
+    .geometric-heading:hover::before,
+    .geometric-heading:hover::after {
+        width: clamp(10px, 2.5vw, 20px);
+        height: clamp(10px, 2.5vw, 20px);
     }
 }
 
