@@ -228,20 +228,23 @@
 <!-- FAQ section -->
 <section class="faq-section p-4 md:p-10 bg-gray-100">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="geometric-heading-container">
+            <h2 class="geometric-heading">Frequently Asked Questions</h2>
+        </div>    
         
         <!-- Mobile Tabs -->
         <div class="md:hidden mb-6">
-            <div class="flex space-x-2 overflow-x-auto pb-2">
+            <div class="flex items-center space-x-2 overflow-x-auto pb-2">
                 <button 
                     id="mobile-web-dev-btn" 
-                    class="faq-btn whitespace-nowrap px-4 py-2 rounded-lg transition-all duration-300 font-medium text-gray-800"
+                    class="faq-btn whitespace-nowrap px-4 py-2 rounded-lg transition-all duration-300 font-medium text-gray-800 hover:bg-gray-200"
                     onclick="showFAQContent('web-dev', this)">
                     Web Development
                 </button>
+                <div class="h-8 w-px bg-gray-300"></div>
                 <button 
                     id="mobile-ecom-btn" 
-                    class="faq-btn whitespace-nowrap px-4 py-2 rounded-lg transition-all duration-300 font-medium text-gray-800"
+                    class="faq-btn whitespace-nowrap px-4 py-2 rounded-lg transition-all duration-300 font-medium text-gray-800 hover:bg-gray-200"
                     onclick="showFAQContent('ecom', this)">
                     E-Commerce
                 </button>
@@ -255,14 +258,14 @@
                     <div class="flex flex-col space-y-2">
                         <button 
                             id="web-dev-btn" 
-                            class="faq-btn w-full px-4 py-3 text-left rounded-lg transition-all duration-300 font-medium text-gray-800"
+                            class="faq-btn w-full px-4 py-3 text-left rounded-lg transition-all duration-300 font-medium text-gray-800 hover:bg-blue-300"
                             onclick="showFAQContent('web-dev', this)">
                             Web Development
                         </button>
-        
+                        <div class="h-px w-full bg-gray-300"></div>
                         <button 
                             id="ecom-btn" 
-                            class="faq-btn w-full px-4 py-3 text-left rounded-lg transition-all duration-300 font-medium text-gray-800"
+                            class="faq-btn w-full px-4 py-3 text-left rounded-lg transition-all duration-300 font-medium text-gray-800 hover:bg-blue-300"
                             onclick="showFAQContent('ecom', this)">
                             E-Commerce
                         </button>
