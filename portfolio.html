@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Browse our portfolio of successful web development, ecommerce, and digital transformation projects. See how we’ve helped businesses of all sizes scale and innovate. View our case studies and get inspired!">
     <title>Portfolio - UnityLan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Font Awesome for Icons -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- animation -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!-- Font Awesome for Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
@@ -172,6 +175,9 @@
 
             <!-- Left side with icons and descriptions -->
             <div class="flex flex-col lg:w-1/2 space-y-8">
+                <div class="geometric-heading-container">
+                    <h2 class="geometric-heading">Why Choose Us</h2>
+                </div>                
                 <div data-aos="fade-up" data-aos-delay="100" class="flex items-center space-x-4">
                     <div class="text-blue-500 text-4xl">
                         <i class="fas fa-truck"></i>
@@ -212,7 +218,7 @@
 
             <!-- Right side with image -->
             <div class="image-container lg:w-1/2">
-                <img data-aos="fade-left" data-aos-delay="500" src="https://via.placeholder.com/600x400" alt="Why Choose Us Image">
+                <img data-aos="fade-left" data-aos-delay="500" src="images/work6.webp" alt="Why Choose Us Image">
             </div>
         </div>
     </div>
@@ -244,7 +250,9 @@
 
     <!-- Right Aligned FAQ Content -->
     <div class="w-full sm:w-3/4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+        <div class="geometric-heading-container">
+            <h2 class="geometric-heading">Frequently Asked Questions</h2>
+        </div>        
 
         <!-- Web Development FAQ Content -->
         <div id="web-dev" class="faq-content hidden">
