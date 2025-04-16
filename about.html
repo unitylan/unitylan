@@ -116,89 +116,84 @@
     </div>
 </section>
     
-<div class="flex flex-col sm:flex-row">
-    <!-- Left section: Mission and Vision (2/3 width) -->
-    <div class="w-full sm:w-2/3 p-4 sm:p-8">
+<div class="flex flex-col lg:flex-row">
+    <!-- Left section: Mission and Vision (full width on mobile, 2/3 on desktop) -->
+    <div class="w-full lg:w-2/3 p-8">
+
         <!-- Our Story -->
         <div class="mb-12">
             <h2 class="text-2xl font-semibold text-gray-800">Our</h2>
-            <h2 class="text-5xl sm:text-7xl font-semibold text-gray-800 mb-4">Story</h2>
-            <p class="text-base sm:text-lg text-gray-600">
-                We started with a simple idea: to bring innovative solutions to the market that make a difference. Our journey began in a small garage, where a team of passionate individuals worked day and night to create something revolutionary.
-            </p>
+            <h2 class="text-7xl font-semibold text-gray-800 mb-4">Story</h2>
+            <p class="text-lg text-gray-600">We started with a simple idea: to bring innovative solutions to the market that make a difference. Our journey began in a small garage, where a team of passionate individuals worked day and night to create something revolutionary.</p>
         </div>
-
-        <!-- Mission and Vision stacked on small screens -->
-        <div class="flex flex-col sm:flex-row justify-between mb-12">
+        
+        <!-- Mission and Vision side by side -->
+        <div class="flex flex-col lg:flex-row justify-between mb-12">
             <!-- Mission -->
-            <div class="w-full sm:w-1/2 sm:pr-4 mb-6 sm:mb-0">
-                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">Mission</h2>
-                <p class="text-base sm:text-lg text-gray-600">Our mission is to provide innovative solutions that create a sustainable future for all. We strive to drive growth and success through collaboration and creativity.</p>
+            <div class="w-full lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">Mission</h2>
+                <p class="text-lg text-gray-600">Our mission is to provide innovative solutions that create a sustainable future for all. We strive to drive growth and success through collaboration and creativity.</p>
             </div>
 
             <!-- Vision -->
-            <div class="w-full sm:w-1/2 sm:pl-4">
-                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">Vision</h2>
-                <p class="text-base sm:text-lg text-gray-600">We envision a world where technology empowers individuals and communities to thrive, fostering an environment of positive change and progress for generations to come.</p>
+            <div class="w-full lg:w-1/2 lg:pl-4">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">Vision</h2>
+                <p class="text-lg text-gray-600">We envision a world where technology empowers individuals and communities to thrive, fostering an environment of positive change and progress for generations to come.</p>
             </div>
         </div>
-
+        
         <!-- Horizontal Line -->
         <div class="mb-12">
             <div class="border-t-2 border-gray-400 w-2/3 mx-auto"></div>
         </div>
 
-        <!-- Values with Icons (unchanged but responsive spacing) -->
+        <!-- Values with Icons (Vertical) -->
         <div class="flex flex-col items-center">
-            <!-- Transparency -->
-            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8 opacity-0 transition-opacity duration-1000 fade-on-scroll">
-                <i class="fas fa-eye text-4xl sm:text-5xl icon mb-4"></i>
-                <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Transparency</h3>
-                <p class="text-sm sm:text-base text-gray-600">We believe in complete <b>openness</b> with our clients. From clear timelines to transparent pricing, we ensure you're always in the know with no hidden surprises.</p>
+            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8" data-aos="fade-up" data-aos-duration="1000">
+                <i class="fas fa-eye text-5xl icon mb-4"></i> <!-- Eye icon for transparency -->
+                <h3 class="text-xl font-semibold text-gray-800">Transparency</h3>
+                <p class="text-gray-600">We believe in complete <b>openness</b> with our clients. From clear timelines to transparent pricing, we ensure you're always in the know with no hidden surprises.</p>
             </div>
 
             <!-- Customer-Centricity -->
-            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8 opacity-0 transition-opacity duration-1000 fade-on-scroll">
-                <i class="fas fa-heart text-4xl sm:text-5xl icon mb-4"></i>
-                <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Customer-Centricity</h3>
-                <p class="text-sm sm:text-base text-gray-600">Your success is our success. We tailor our solutions specifically to meet your unique needs, ensuring the best possible outcome for your business.</p>
+            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <i class="fas fa-heart text-5xl icon mb-4"></i> <!-- Heart icon for customer care -->
+                <h3 class="text-xl font-semibold text-gray-800">Customer-Centricity</h3>
+                <p class="text-gray-600">Your success is our success. We tailor our solutions specifically to meet your unique needs, ensuring the best possible outcome for your business.</p>
             </div>
 
             <!-- Quality -->
-            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8 opacity-0 transition-opacity duration-1000 fade-on-scroll">
-                <i class="fas fa-check-circle text-4xl sm:text-5xl icon mb-4"></i>
-                <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Quality</h3>
-                <p class="text-sm sm:text-base text-gray-600">We prioritize <b>excellence</b> in every aspect, from clean code to exceptional user experience. Quality is at the heart of every project we deliver.</p>
+            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <i class="fas fa-check-circle text-5xl icon mb-4"></i> <!-- Check-circle icon for quality -->
+                <h3 class="text-xl font-semibold text-gray-800">Quality</h3>
+                <p class="text-gray-600">We prioritize <b>excellence</b> in every aspect, from clean code to exceptional user experience. Quality is at the heart of every project we deliver.</p>
             </div>
 
-            <!-- Innovation -->
-            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8 opacity-0 transition-opacity duration-1000 fade-on-scroll">
-                <i class="fas fa-lightbulb text-4xl sm:text-5xl icon mb-4"></i>
-                <h3 class="text-lg sm:text-xl font-semibold text-gray-800">Innovation</h3>
-                <p class="text-sm sm:text-base text-gray-600">We embrace the latest technologies and forward-thinking solutions to ensure your website is future-ready and able to scale with your business.</p>
+           <!-- Innovation -->
+            <div class="flex flex-col items-center justify-center text-center max-w-xs mx-auto mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <i class="fas fa-lightbulb text-5xl icon mb-4"></i> <!-- Lightbulb icon for innovation -->
+                <h3 class="text-xl font-semibold text-gray-800">Innovation</h3>
+                <p class="text-gray-600">We embrace the latest technologies and forward-thinking solutions to ensure your website is future-ready and able to scale with your business.</p>
             </div>
         </div>
     </div>
-
-    <!-- Right section: Masonry -->
-    <div class="w-full sm:w-1/2 p-4 sm:p-8">
-        <div class="grid grid-cols-2 gap-2 sticky-masonry">
-            <div class="mt-8">
-                <img src="images/work3.webp" alt="Image 1" class="w-full h-auto rounded-lg shadow-lg">
+    
+    <!-- Right section: Image Grid (full width on mobile, 1/3 on desktop) -->
+    <div class="w-full lg:w-1/3 p-8">
+        <div class="sticky top-32 grid grid-cols-2 gap-4">
+            <!-- First Column: Single Large Image -->
+            <div class="col-span-1">
+                <img src="images/work3.webp" alt="Work Image" class="w-full h-[600px] object-cover rounded-lg shadow-lg">
             </div>
-            <div>
-                <img src="images/mission.avif" alt="Image 2" class="w-full h-auto rounded-lg shadow-lg">
-            </div>
-            <div class="mt-8">
-                <img src="images/story.avif" alt="Image 3" class="w-full h-auto rounded-lg shadow-lg">
-            </div>
-            <div>
-                <img src="images/work7.webp" alt="Image 4" class="w-full h-auto rounded-lg shadow-lg">
+            
+            <!-- Second Column: Two Large Images -->
+            <div class="col-span-1 flex flex-col gap-4">
+                <img src="images/mission.avif" alt="Mission Image" class="w-full h-[290px] object-cover rounded-lg shadow-lg">
+                <img src="images/story.avif" alt="Story Image" class="w-full h-[290px] object-cover rounded-lg shadow-lg">
             </div>
         </div>
     </div>
 </div>
-
 <!-- Contact Section -->
 <section class="cta-section">
     <div class="cta-container">
