@@ -516,20 +516,3 @@
         background-position-x: 20px;
     }
 }
-
-/* Additional custom styling for overlapping image */
-.image-container {
-    position: relative;
-}
-
-.image-container img {
-    position: absolute;
-    right: 0;
-    top: -50px;
-    z-index: 10;
-    width: 300px;
-}
-
-.why-choose-us-section {
-    padding-top: 120px;
-}

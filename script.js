@@ -114,7 +114,26 @@ function showFAQContent(contentType, clickedButton) {
 
 // Ensure the DOM is loaded before initializing the FAQ section
 document.addEventListener("DOMContentLoaded", () => {
-    // Attach event listeners to FAQ navigation buttons
+    // Set initial state without transitions
+    const webDevBtn = document.getElementById('web-dev-btn');
+    const mobileWebDevBtn = document.getElementById('mobile-web-dev-btn');
+    
+    // Set initial active state
+    webDevBtn.classList.add('bg-blue-500', 'text-white');
+    mobileWebDevBtn.classList.add('bg-blue-500', 'text-white');
+    
+    // Hide all FAQ sections first
+    document.querySelectorAll('.faq-content').forEach(content => {
+        content.classList.add('hidden');
+    });
+    
+    // Show the default FAQ content
+    document.getElementById('web-dev').classList.remove('hidden');
+    
+    // Render the initial FAQ content
+    renderFAQs(webDevFAQs, 'web-dev-faqs', 'web-dev');
+    
+    // Now add event listeners
     document.getElementById('web-dev-btn').addEventListener('click', function() {
         showFAQContent('web-dev', this);
     });
@@ -122,9 +141,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('ecom-btn').addEventListener('click', function() {
         showFAQContent('ecom', this);
     });
+    
+    // Mobile buttons
+    document.getElementById('mobile-web-dev-btn').addEventListener('click', function() {
+        showFAQContent('web-dev', this);
+    });
 
-    // Show the Web Development FAQ by default
-    showFAQContent('web-dev', document.getElementById('web-dev-btn'));
+    document.getElementById('mobile-ecom-btn').addEventListener('click', function() {
+        showFAQContent('ecom', this);
+    });
 });
 
 //service tab section
@@ -243,8 +268,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
-
 
 // Header scroll effect
 window.addEventListener("scroll", function () {
