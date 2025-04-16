@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Show the default FAQ content
     document.getElementById('web-dev').classList.remove('hidden');
+    document.getElementById('mobile-web-dev-btn').classList.remove('hidden');
     
     // Render the initial FAQ content
     renderFAQs(webDevFAQs, 'web-dev-faqs', 'web-dev');
