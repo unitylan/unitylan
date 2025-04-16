@@ -168,103 +168,123 @@
 </section>
     
 <!-- Why Us Section -->
-<section class="why-choose-us-section bg-gray-50 py-16 px-4 sm:px-8 md:px-12 lg:px-16">
-    <div class="max-w-7xl mx-auto">
-        <!-- Container for the section -->
-        <div class="flex flex-col lg:flex-row justify-between items-center lg:space-x-8 space-y-8 lg:space-y-0">
-
-            <!-- Left side with icons and descriptions -->
-            <div class="flex flex-col lg:w-1/2 space-y-8">
-                <div class="geometric-heading-container">
-                    <h2 class="geometric-heading">Why Choose Us</h2>
-                </div>                
-                <div data-aos="fade-up" data-aos-delay="100" class="flex items-center space-x-4">
-                    <div class="text-blue-500 text-4xl">
-                        <i class="fas fa-truck"></i>
+<section id="why-us" class="p-6 md:p-12 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <!-- Left Side - Content -->
+        <div class="text-left" data-aos="fade-right" data-aos-duration="1000">
+            <div class="geometric-heading-container">
+                <h2 class="geometric-heading">Why Choose Us</h2>
+            </div>    
+            <p class="text-gray-600 text-base md:text-lg mb-6 md:mb-8">We combine technical expertise with a deep understanding of business needs to deliver solutions that drive real results.</p>
+            
+            <!-- Icons with Descriptions -->
+            <div class="space-y-4 md:space-y-6 pl-4 border-l-4 border-blue-500">
+                <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-500 text-xl md:text-2xl">
+                        <i class="fas fa-rocket"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold">Fast Delivery</h3>
-                        <p class="text-gray-600">We guarantee fast and reliable delivery to all our customers. You won’t have to wait long to get your products.</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-800">Fast Delivery</h3>
+                        <p class="text-sm md:text-base text-gray-600">Quick turnaround times without compromising on quality</p>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="200" class="flex items-center space-x-4">
-                    <div class="text-blue-500 text-4xl">
+                <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-500 text-xl md:text-2xl">
                         <i class="fas fa-users"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold">Expert Team</h3>
-                        <p class="text-gray-600">Our team consists of highly skilled professionals, ready to assist you with any challenges you face.</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-800">Expert Team</h3>
+                        <p class="text-sm md:text-base text-gray-600">Seasoned professionals with years of industry experience</p>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="300" class="flex items-center space-x-4">
-                    <div class="text-blue-500 text-4xl">
-                        <i class="fas fa-headset"></i>
+                <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-blue-500 text-xl md:text-2xl">
+                        <i class="fas fa-handshake"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold">Customer Centric</h3>
-                        <p class="text-gray-600">We prioritize customer satisfaction and tailor our solutions to meet your needs.</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-800">Customer Centric</h3>
+                        <p class="text-sm md:text-base text-gray-600">Your success is our priority in every project</p>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="400" class="flex items-center space-x-4">
-                    <div class="text-blue-500 text-4xl">
-                        <i class="fas fa-lock"></i>
+                <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-blue-500 text-xl md:text-2xl">
+                        <i class="fas fa-tags"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold">Secure Solutions</h3>
-                        <p class="text-gray-600">We provide secure and trustworthy solutions, ensuring your data and privacy are always protected.</p>
+                        <h3 class="text-base md:text-lg font-semibold text-gray-800">Flexible Pricing</h3>
+                        <p class="text-sm md:text-base text-gray-600">Customized solutions to fit your budget</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Right side with image -->
-            <div class="image-container lg:w-1/2">
-                <img data-aos="fade-left" data-aos-delay="500" src="images/work6.webp" alt="Why Choose Us Image">
-            </div>
+        <!-- Right Side - Image -->
+        <div class="relative h-[300px] md:h-[500px] w-full" data-aos="fade-left" data-aos-duration="1000">
+            <img src="images/work6.webp" alt="Our Team" class="w-full h-full object-cover rounded-lg shadow-xl">
         </div>
     </div>
 </section>
 
 <!-- FAQ section -->
-<section class="faq-section p-10 bg-gray-100 text-center flex flex-col sm:flex-row">
-    <!-- Left Aligned FAQ Navigation -->
-    <div class="w-full sm:w-1/4 p-6">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">FAQ Navigation</h3>
-        <div class="space-y-4">
-            <!-- Web Development FAQ Button -->
-            <button 
-                id="web-dev-btn" 
-                class="faq-btn w-full p-4 text-gray-800 font-semibold text-lg rounded-lg shadow-md"
-                onclick="showFAQContent('web-dev', this)">
-                Web Development FAQ
-            </button>
-
-            <!-- E-Commerce FAQ Button -->
-            <button 
-                id="ecom-btn" 
-                class="faq-btn w-full p-4 text-gray-800 font-semibold text-lg rounded-lg shadow-md"
-                onclick="showFAQContent('ecom', this)">
-                E-Commerce FAQ
-            </button>
-        </div>
-    </div>
-
-    <!-- Right Aligned FAQ Content -->
-    <div class="w-full sm:w-3/4">
-        <div class="geometric-heading-container">
-            <h2 class="geometric-heading">Frequently Asked Questions</h2>
-        </div>        
-
-        <!-- Web Development FAQ Content -->
-        <div id="web-dev" class="faq-content hidden">
-            <div id="web-dev-faqs" class="mt-6 max-w-4xl mx-auto text-left">
-                <!-- FAQ content will be rendered dynamically here -->
+<section class="faq-section p-4 md:p-10 bg-gray-100">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">Frequently Asked Questions</h2>
+        
+        <!-- Mobile Tabs -->
+        <div class="md:hidden mb-6">
+            <div class="flex space-x-2 overflow-x-auto pb-2">
+                <button 
+                    id="mobile-web-dev-btn" 
+                    class="faq-btn whitespace-nowrap px-4 py-2 rounded-lg transition-all duration-300 font-medium text-gray-800"
+                    onclick="showFAQContent('web-dev', this)">
+                    Web Development
+                </button>
+                <button 
+                    id="mobile-ecom-btn" 
+                    class="faq-btn whitespace-nowrap px-4 py-2 rounded-lg transition-all duration-300 font-medium text-gray-800"
+                    onclick="showFAQContent('ecom', this)">
+                    E-Commerce
+                </button>
             </div>
         </div>
 
-        <!-- E-Commerce FAQ Content -->
-        <div id="ecom" class="faq-content hidden">
-            <div id="ecom-faqs" class="mt-6 max-w-4xl mx-auto text-left">
-                <!-- FAQ content will be rendered dynamically here -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- FAQ Navigation (Desktop) -->
+            <div class="hidden md:block md:col-span-1">
+                <div class="bg-white rounded-xl shadow-lg p-4 sticky top-24">
+                    <div class="flex flex-col space-y-2">
+                        <button 
+                            id="web-dev-btn" 
+                            class="faq-btn w-full px-4 py-3 text-left rounded-lg transition-all duration-300 font-medium text-gray-800"
+                            onclick="showFAQContent('web-dev', this)">
+                            Web Development
+                        </button>
+        
+                        <button 
+                            id="ecom-btn" 
+                            class="faq-btn w-full px-4 py-3 text-left rounded-lg transition-all duration-300 font-medium text-gray-800"
+                            onclick="showFAQContent('ecom', this)">
+                            E-Commerce
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- FAQ Content -->
+            <div class="md:col-span-3">
+                <!-- Web Development FAQ Content -->
+                <div id="web-dev" class="faq-content">
+                    <div id="web-dev-faqs" class="space-y-6">
+                        <!-- FAQ content will be rendered dynamically here -->
+                    </div>
+                </div>
+        
+                <!-- E-Commerce FAQ Content -->
+                <div id="ecom" class="faq-content hidden">
+                    <div id="ecom-faqs" class="space-y-6">
+                        <!-- FAQ content will be rendered dynamically here -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
