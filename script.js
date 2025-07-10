@@ -28,11 +28,11 @@ const webDevFAQs = [
 // FAQ data for E-Commerce
 const ecomFAQs = [
     { question: "How long does a project take?", answer: "Project timelines vary depending on complexity. A basic website may take 4–6 weeks, while larger, custom projects can take 8–12 weeks. We provide detailed timelines before starting." },
-    { question: "What e-commerce platforms do you work with?", answer: "We work with Shopify, Wix, and custom-built e-commerce solutions to provide the best platform for your business." },
+    { question: "What e-commerce platforms do you work with?", answer: "We work with Shopify, WordPress, and custom-built e-commerce solutions to provide the best platform for your business." },
     { question: "What payment gateways do you support?", answer: "We integrate popular payment gateways, including PayFast, Peach Payments, Ozow, Yoco, and more, based on your business needs." },
     { question: "Can you build a custom online store?", answer: "Yes! If you need a unique e-commerce experience, we build custom online stores with advanced features, tailored product pages, and personalized customer journeys." },
     { question: "What is included in an e-commerce project?", answer: "View our e-commerce page for more info." },
-    { question: "Do you integrate third-party tools like email marketing and analytics?", answer: "Yes, we can integrate Facebook Pixel to help with marketing and sales tracking." },
+    { question: "Do you integrate third-party tools like email marketing and analytics?", answer: "Yes, we can integrate Facebook Pixel/MailChimp to help with marketing and sales tracking." },
     { question: "Can I manage my store easily after launch?", answer: "Absolutely! We provide an admin panel where you can update products, track orders, and manage customers without coding knowledge." },
 ];
 
