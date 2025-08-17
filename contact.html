@@ -178,7 +178,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
 <div class="md:w-1/2 p-6">
 
     <div class="mt-6">
-        <form id="contactForm" action="https://formspree.io/f/xovekkaz" method="POST" class="space-y-4 w-full">
+        <form id="contactForm" onsubmit="fbq('track', 'Lead');" action="https://formspree.io/f/xovekkaz" method="POST" class="space-y-4 w-full">
             <div class="flex space-x-4">
                 <div class="w-1/2">
                     <label class="block text-gray-700 font-medium">First Name</label>
@@ -291,7 +291,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
         <!-- Contact Info -->
         <div>
             <h3 class="text-lg font-semibold">Contact Us</h3>
-            <a href="mailto:info@unitylan.co.za" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
                 Email Us
             </a>
   
@@ -311,7 +311,6 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
         &copy; 2025 UnityLan. All rights reserved.
     </div>
 </footer>
-
 
 <script src="script.js"></script>
 </body>

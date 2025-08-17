@@ -237,7 +237,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
         <!-- Contact Info -->
         <div>
             <h3 class="text-lg font-semibold">Contact Us</h3>
-            <a href="mailto:info@unitylan.co.za" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
                 Email Us
             </a>
   
@@ -259,5 +259,8 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
 </footer>
 
 <script src="script.js"></script>
+<script>
+  fbq('track', 'ViewContent');
+</script>
 </body>
 </html>
