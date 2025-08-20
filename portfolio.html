@@ -137,7 +137,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
 </section>  
 
 <!-- Portfolio Section -->
-<section id="portfolio" class="p-10 text-center bg-gray-200">
+<section id="portfolio" class="p-10 text-center">
     <div class="geometric-heading-container">
         <h2 class="geometric-heading">Featured Projects</h2>
     </div>    
@@ -146,13 +146,13 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
     <div class="mt-4 flex flex-wrap justify-center gap-2 sm:gap-0 sm:space-x-4">
         <button id="all-btn" class="filter-btn bg-blue-600 text-white px-5 py-2 rounded-full shadow-lg transform transition hover:scale-110" onclick="filterPortfolio('all')">All</button>
         <button id="ecommerce-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('ecommerce')">E-commerce</button>
-        <button id="agriculture-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('agriculture')">Agriculture</button>
-        <button id="construction-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('construction')">SME</button>
-        <button id="transportation-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('transportation')">Transportation</button>
+        <button id="agriculture-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('agriculture')">Digital Marketing</button>
+        <button id="construction-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('construction')">Websites</button>
+        <button id="transportation-btn" class="filter-btn px-5 py-2 rounded-full shadow-lg bg-blue-300 transform transition hover:scale-110" onclick="filterPortfolio('transportation')">Consulting</button>
     </div>
 
     <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Portfolio Items (unchanged) -->
+        <!-- Portfolio Items  
         <div class="portfolio-item ecommerce bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project1')">
             <img src="images/store.webp" alt="E-commerce Project" class="w-full h-48 object-cover">
             <div class="p-6">
@@ -173,26 +173,29 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
                 <h3 class="text-xl font-semibold">Mokoena Plumbing(sample)</h3>
                 <p class="text-gray-600 mt-2">A service-focused website to showcase offerings and enable easy appointment bookings.</p>
             </div>
-        </div>
-        <div class="portfolio-item construction bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project5')">
-            <img src="images/hr.webp" alt="Farming Website" class="w-full h-48 object-cover">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold">Fatsoleo HR Consulting</h3>
-                <p class="text-gray-600 mt-2">A service-focused website to showcase offerings and enable easy appointment bookings.</p>
-            </div>
-        </div>
-        <div class="portfolio-item transportation bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="togglePopup('project4')">
-            <img src="images/driving.webp" alt="Farming Website" class="w-full h-48 object-cover">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold">DriveSafe Academy(sample)</h3>
-                <p class="text-gray-600 mt-2">A platform for lesson scheduling, instructor info, and student sign-ups.</p>
-            </div>
-        </div>
+        </div> -->
+<!-- Portfolio Item -->
+<div class="portfolio-item construction bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 cursor-pointer" onclick="openPopup('hrConsulting')">
+    <img src="images/hr.webp" alt="Fatsolelo" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-semibold">Fatsolelo HR Consulting</h3>
+        <p class="text-gray-600 mt-2">A service-focused website to showcase offerings, enable easy appointment bookings and content management system.</p>
     </div>
+</div>
+
+<!-- Reusable Modal -->
+<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl w-11/12 md:w-2/3 lg:w-1/2 p-6 relative overflow-y-auto max-h-[90vh]">
+        <!-- Close Button
+        <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl" onclick="closePopup()">&times;</button> -->
+        <div id="modalContent"></div>
+    </div>
+</div>    
+</div>
 </section>
     
 <!-- Why Us Section -->
-<section id="why-us" class="p-6 md:p-12 bg-white overflow-hidden">
+<section id="why-us" class="p-6 md:p-12 bg-white overflow-hidden bg-gray-50">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
         <!-- Left Side - Content -->
         <div class="text-left overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
@@ -250,7 +253,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
 </section>
 
 <!-- FAQ section -->
-<section class="faq-section p-4 md:p-10 bg-gray-100">
+<section class="faq-section p-4 md:p-10">
     <div class="max-w-6xl mx-auto">
         <div class="geometric-heading-container">
             <h2 class="geometric-heading">Frequently Asked Questions</h2>

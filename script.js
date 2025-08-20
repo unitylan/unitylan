@@ -15,6 +15,75 @@ function filterPortfolio(category) {
     document.getElementById(category + "-btn").classList.add("bg-blue-600", "text-white", "scale-105");
 }
 
+// Project data stored in JS
+const projects = {
+    hrConsulting: {
+        title: "Fatsolelo HR Consulting – HR & Career Services",
+        overview: "Fatsolelo HR Consulting is a clean, professional website built to give the business a strong online presence. The site showcases core services and makes it easy for clients to book appointments & showcase new career listings — ideal for busy professionals who need a simple, effective way to connect with their audience.",
+        techStack: ["HTML & Tailwind CSS – for responsive, modern UI", "JavaScript – for interactivity", "Google Sheets – to allow easy content updates without touching code", "Social Media Integrations – allowing visitors to easily connect with the brand across social platforms"],
+        keyFeatures: ["Service showcase with clear layout", "Easy appointment booking form", "Responsive design for mobile & desktop", "Enabling the client to update content directly without needing technical help", "Making it easy for users to connect with the business across platforms like Facebook, LinkedIn, and Twitter"],
+        challenges: "One of the challenges was integrating a user-friendly booking form with real-time validation. We focused on ensuring that the form was easy to complete, mobile-friendly, and error-free. Plus, We learned a lot about making the site responsive across various devices to ensure a seamless experience for all users.",
+        screenshots: [
+            { src: "images/hr.webp", alt: "Fatsolelo Screenshot" }
+        ],
+        links: [
+            { url: "https://fatsolelo.co.za", text: "View Live Demo" },
+        ],
+        //improvements: "Next, I'd add an automated email confirmation for bookings and improve accessibility features."
+    }
+};
+
+// Open modal and populate content
+function openPopup(projectId) {
+    const project = projects[projectId];
+    if (!project) return;
+
+    const modalContent = document.getElementById("modalContent");
+    modalContent.innerHTML = `
+        <h2 class="text-2xl font-bold mb-2">${project.title}</h2>
+        <p class="text-gray-700 mb-4">${project.overview}</p>
+
+        <h3 class="font-semibold text-xl mt-4">Behind the Scenes</h3>
+        <ul class="list-disc list-inside text-left text-gray-700 mb-4">
+            ${project.techStack.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+
+        <h3 class="font-semibold text-xl mt-4">Key Features</h3>
+        <ul class="list-disc list-inside text-gray-700 text-left mb-4">
+            ${project.keyFeatures.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+
+        <h3 class="font-semibold text-xl mt-4">Development Process / Challenges</h3>
+        <p class="text-gray-700 text-left mb-4">${project.challenges}</p>
+
+        <h3 class="font-semibold mt-4">Screenshots / Demo</h3>
+        ${project.screenshots.map(img => `<img src="${img.src}" alt="${img.alt}" class="w-full h-auto rounded-lg mb-4">`).join("")}
+        <p>
+            ${project.links.map(link => `<a href="${link.url}" class="text-blue-600 hover:underline inline-flex items-center mr-4" target="_blank">
+            ${link.text} 
+            <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>`).join("")}
+        </p>
+        <button class="mt-4 px-8 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700" onclick="closePopup()">Close</button>
+
+    `;
+
+    const modal = document.getElementById("projectModal");
+    modal.classList.remove("hidden");
+
+    // Close when clicking outside the modal content
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            closePopup();
+        }
+    });
+}
+
+function closePopup() {
+    document.getElementById("projectModal").classList.add("hidden");
+}
 // FAQ data for Web Development
 const webDevFAQs = [
     { question: "How long does a project take?", answer: "Project timelines vary depending on complexity. A basic website may take 4–6 weeks, while larger, custom projects can take 8–12 weeks. We provide detailed timelines before starting." },
