@@ -1,4 +1,72 @@
 
+// Contact Form Validation
+document.addEventListener("DOMContentLoaded", function() {
+  const ctaForms = document.querySelectorAll(".cta-form");
+
+  ctaForms.forEach(form => {
+    const fields = form.querySelectorAll("input, textarea");
+
+    // Create a message container
+    let messageBox = document.createElement("div");
+    messageBox.className = "text-center mt-4 text-sm";
+    form.appendChild(messageBox);
+
+    // Make all fields required
+    fields.forEach(field => field.setAttribute("required", "true"));
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // Stop redirect
+      let valid = true;
+
+      fields.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.classList.add("border-red-500");
+        } else {
+          field.classList.remove("border-red-500");
+        }
+      });
+
+      if (!valid) {
+        messageBox.textContent = "Please fill out all fields.";
+        messageBox.classList.add("text-red-500");
+        return;
+      }
+
+      // Prepare form data
+      const formData = new FormData(form);
+
+      // Send via AJAX
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok || data.success) {
+          messageBox.textContent = "Thank you! Your message has been sent.";
+          messageBox.classList.remove("text-red-500");
+          messageBox.classList.add("text-green-600");
+
+          // Clear the form
+          form.reset();
+
+          // Fire FB Pixel after successful submit
+          const eventName = form.dataset.fbevent || "Lead";
+          if (typeof fbq === "function") fbq("track", eventName);
+        } else {
+          messageBox.textContent = "Oops! There was a problem. Please try again.";
+          messageBox.classList.add("text-red-500");
+        }
+      })
+      .catch(() => {
+        messageBox.textContent = "Oops! Something went wrong. Please try again later.";
+        messageBox.classList.add("text-red-500");
+      });
+    });
+  });
+});
 
 //portfolio tab filter
 function filterPortfolio(category) {
@@ -504,72 +572,3 @@ AOS.init({
     },
     plugins: [],
   }
-
-// Contact Form Validation
-document.addEventListener("DOMContentLoaded", function() {
-  const ctaForms = document.querySelectorAll(".cta-form");
-
-  ctaForms.forEach(form => {
-    const fields = form.querySelectorAll("input, textarea");
-
-    // Create a message container
-    let messageBox = document.createElement("div");
-    messageBox.className = "text-center mt-4 text-sm";
-    form.appendChild(messageBox);
-
-    // Make all fields required
-    fields.forEach(field => field.setAttribute("required", "true"));
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault(); // Stop redirect
-      let valid = true;
-
-      fields.forEach(field => {
-        if (!field.value.trim()) {
-          valid = false;
-          field.classList.add("border-red-500");
-        } else {
-          field.classList.remove("border-red-500");
-        }
-      });
-
-      if (!valid) {
-        messageBox.textContent = "Please fill out all fields.";
-        messageBox.classList.add("text-red-500");
-        return;
-      }
-
-      // Prepare form data
-      const formData = new FormData(form);
-
-      // Send via AJAX
-      fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.ok || data.success) {
-          messageBox.textContent = "Thank you! Your message has been sent.";
-          messageBox.classList.remove("text-red-500");
-          messageBox.classList.add("text-green-600");
-
-          // Clear the form
-          form.reset();
-
-          // Fire FB Pixel after successful submit
-          const eventName = form.dataset.fbevent || "Lead";
-          if (typeof fbq === "function") fbq("track", eventName);
-        } else {
-          messageBox.textContent = "Oops! There was a problem. Please try again.";
-          messageBox.classList.add("text-red-500");
-        }
-      })
-      .catch(() => {
-        messageBox.textContent = "Oops! Something went wrong. Please try again later.";
-        messageBox.classList.add("text-red-500");
-      });
-    });
-  });
-});
