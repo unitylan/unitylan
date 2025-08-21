@@ -158,11 +158,12 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
             <h3 class="text-xl font-semibold">Systems Integration</h3>
             <p class="mt-2">We help your organization integrate disparate systems into a cohesive, efficient network. Our solutions ensure that your IT systems work together seamlessly, reducing costs and boosting productivity.</p>
         </div>
-        <!-- Data Analytics -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h3 class="text-xl font-semibold">Data Analytics</h3>
-            <p class="mt-2">With our data analytics services, we help you leverage the power of data to make informed decisions. We offer customized dashboards and insights to help your business unlock its full potential by using the right metrics.</p>
-        </div>
+<!-- Technical Support -->
+<div class="bg-white p-6 rounded-lg shadow-lg">
+    <h3 class="text-xl font-semibold">Technical Support</h3>
+    <p class="mt-2">Our technical support services are designed to provide you with timely and efficient assistance for any IT-related issues. Whether it's troubleshooting, system maintenance, or software updates, our team ensures your technology runs smoothly and optimally.</p>
+</div>
+
         <!-- Security -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
             <h3 class="text-xl font-semibold">Security & Risk Management</h3>
@@ -171,18 +172,39 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
     </div>
 </section>
 
-<!-- Contact Section -->
-<section class="cta-section">
-    <div class="cta-container">
-        <div class="cta-text">
-            <h2 class="cta-headline">Tech Clarity Starts Here</h2>
-            <p class="cta-description">Get expert insights, smart systems, and custom strategies to streamline operations and scale confidently. Your smarter tech journey starts now.</p>
-        </div>
-        <div class="cta-buttons">
-            <a href="contact.html" class="cta-btn cta-btn-primary">Book Free Consultation</a>
-            <a href="#consult" class="cta-btn cta-btn-secondary">Explore Services</a>
-        </div>
+<!-- IT Consulting CTA -->
+<section class="py-12 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div class="text-left">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Simplify <span class="relative inline-block">
+            Technology
+            <svg class="absolute -bottom-1 sm:-bottom-2 left-0 w-full" height="3" viewBox="0 0 200 4" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2C50 2 50 0 100 0C150 0 150 4 200 4" stroke="#3B82F6" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </span> For Your Business
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 mb-6">
+          Our IT consulting helps you optimize systems, reduce costs, and scale with confidence.
+        </p>
+      </div>
+      <div class="bg-blue-50 rounded-2xl p-6 sm:p-8">
+        <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Book a Free Consultation</h3>
+        <form action="https://formspree.io/f/xanbrwpn" method="POST" class="space-y-4 cta-form" data-fbevent="Lead">
+          <input type="hidden" name="subject" value="New IT Consulting Lead">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <textarea name="message" placeholder="What IT challenges are you facing?" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+          <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Schedule Call
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Footer -->
@@ -206,6 +228,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
     <!-- Logo for desktop -->
     <div class="hidden md:block">
         <img src="images/logo2.webp" alt="UnityLan Logo" class="w-[200px] max-h-full object-contain">
+        <p class="text-sm text-gray-600 mt-2">UnityLan provides innovative web development, digital marketing, and IT consulting services to help businesses thrive in the digital world.</p>
     </div>
   
     <!-- Divider (mobile only) -->
@@ -237,7 +260,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
         <!-- Contact Info -->
         <div>
             <h3 class="text-lg font-semibold">Contact Us</h3>
-            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-600 transition">
                 Email Us
             </a>
   

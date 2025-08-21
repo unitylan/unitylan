@@ -504,4 +504,45 @@ AOS.init({
     },
     plugins: [],
   }
-  
+
+// Contact Form Validation
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all CTA forms
+  const ctaForms = document.querySelectorAll(".cta-form");
+
+  ctaForms.forEach(form => {
+    // Loop through all input and textarea fields
+    const fields = form.querySelectorAll("input, textarea");
+
+    // Make all fields required
+    fields.forEach(field => {
+      field.setAttribute("required", "true");
+    });
+
+    // Handle form submission
+    form.addEventListener("submit", function(e) {
+      let valid = true;
+
+      fields.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.classList.add("border-red-500"); // highlight empty fields
+        } else {
+          field.classList.remove("border-red-500");
+        }
+      });
+
+      if (!valid) {
+        e.preventDefault();
+        alert("Please fill out all fields.");
+      } else {
+        // Fire FB Pixel event based on a data attribute
+        // Example: <form class="cta-form" data-fbevent="Lead">
+        const eventName = form.dataset.fbevent || "Lead";
+        if (typeof fbq === "function") {
+          fbq("track", eventName);
+        }
+      }
+    });
+  });
+});

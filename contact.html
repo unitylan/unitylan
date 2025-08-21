@@ -137,48 +137,81 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
 <!-- form Section -->
 <div  class="form-container max-w-7xl mx-auto p-8 bg-white shadow-lg rounded-lg flex flex-col md:flex-row items-center md:items-start">
         
-    <!-- Left Section with Image and Contact Info -->
-    <div class="md:w-1/2 p-6 text-center md:text-center">
-        <div class="geometric-heading-container">
-            <h2 class="geometric-heading">Operating Hours</h2>
-        </div>  
-        <div class="operating-hours mt-6">
-            <div>
-                <p><strong>Monday:</strong></p>
-                <p>9:00 AM - 5:00 PM</p>
-            </div>
-            <div>
-                <p><strong>Tuesday:</strong></p>
-                <p>9:00 AM - 5:00 PM</p>
-            </div>
-            <div>
-                <p><strong>Wednesday:</strong></p>
-                <p>9:00 AM - 5:00 PM</p>
-            </div>
-            <div>
-                <p><strong>Thursday:</strong></p>
-                <p>9:00 AM - 5:00 PM</p>
-            </div>
-            <div>
-                <p><strong>Friday:</strong></p>
-                <p>9:00 AM - 5:00 PM</p>
-            </div>
-            <div>
-                <p><strong>Saturday:</strong></p>
-                <p>9:00 AM - 2:00 PM</p>
-            </div>
-            <div>
-                <p><strong>Sunday:</strong></p>
-                <p>Closed</p>
-            </div>
-        </div>
+<!-- Left Section: Get In Touch -->
+<div class="md:w-1/2 p-6 text-center md:text-left">
+  <div class="geometric-heading-container">
+        <h2 class="geometric-heading">Get in Touch</h2>
+  </div>  
+
+  <div class="space-y-6">
+    <!-- Address -->
+    <div class="flex items-start">
+      <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+        <i class="fas fa-map-marker-alt text-white text-xl"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-1">Address</h3>
+        <p class="text-gray-700">Pretoria</p>
+        <p class="text-gray-700">Gauteng, South Africa <span class="text-gray-500"> (Getting a space soon)</span></p>
+      </div>
     </div>
+
+    <!-- Phone 
+    <div class="flex items-start">
+      <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+        <i class="fas fa-phone-alt text-white text-xl"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-1">Phone</h3>
+        <p class="text-gray-700">Main: +27 123 456 7890</p>
+        <p class="text-gray-700">Support: +27 123 456 7891</p>
+      </div>
+    </div> -->
+
+    <!-- Email -->
+    <div class="flex items-start">
+      <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+        <i class="fas fa-envelope text-white text-xl"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-1">Email</h3>
+        <p class="text-gray-700">info@unitylan.co.za</p>
+      </div>
+    </div>
+
+    <!-- Operating Hours -->
+    <div class="flex items-start">
+      <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+        <i class="fas fa-clock text-white text-xl"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700  mb-1">Operating Hours</h3>
+        <p class="text-gray-700">Mon-Fri: 9:00 AM - 5:00 PM</p>
+        <p class="text-gray-700">Sat: 9:00 AM - 2:00 PM</p>
+        <p class="text-gray-700">Sun: Closed</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Links -->
+  <div class="mt-12">
+    <h3 class="text-xl font-semibold text-gray-700 mb-4">Connect With Us</h3>
+    <div class="flex space-x-4">
+      <a href="https://facebook.com" target="_blank" class="hover:text-gray-900 transition">
+        <i class="fab fa-facebook text-3xl"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-gray-900 transition">
+        <i class="fab fa-instagram text-3xl"></i>
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- Right Section with Form -->
 <div class="md:w-1/2 p-6">
 
     <div class="mt-6">
-        <form id="contactForm" onsubmit="fbq('track', 'Lead');" action="https://formspree.io/f/xovekkaz" method="POST" class="space-y-4 w-full">
+        <form id="contactForm" onsubmit="fbq('track', 'Lead');" action="https://formspree.io/f/xqalrkkk" method="POST" class="space-y-4 w-full">
             <div class="flex space-x-4">
                 <div class="w-1/2">
                     <label class="block text-gray-700 font-medium">First Name</label>
@@ -199,7 +232,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
                     <select name="service" autocomplete="off" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white">
                         <option value="">Choose a Service</option>
                         <option value="web-development">Web Development</option>
-                        <option value="ecommerce">E-commerce</option>
+                        <option value="ecommerce">E-Commerce</option>
                         <option value="consulting">Consulting</option>
                         <option value="support">Technical Support</option>
                         <option value="marketing">Digital Marketing</option>
@@ -207,7 +240,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
                 </div>
             </div>
             <div>
-                <label class="block text-gray-700 font-medium">Company Name (Optional)</label>
+                <label class="block text-gray-700 font-medium">Business Name (Optional)</label>
                 <input type="text" name="company" autocomplete="off" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Company Name">
             </div>
             <div>
@@ -223,24 +256,8 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
 </div>
 </div>
 
-<!-- Contact Info Section in 3 Columns with Icons -->
-<div class="max-w-8xl mx-auto p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-    <div class="flex flex-col items-center">
-        <i class="fas fa-phone-alt text-3xl text-gray-800"></i>
-        <p class="text-lg text-gray-700 mt-2"><strong>Phone:</strong> (012) 456-7890</p>
-    </div>
-    <div class="flex flex-col items-center">
-        <i class="fas fa-envelope text-3xl text-gray-800"></i>
-        <p class="text-lg text-gray-700 mt-2"><strong>Email:</strong> info@unitylan.co.za</p>
-    </div>
-    <div class="flex flex-col items-center">
-        <i class="fas fa-map-marker-alt text-3xl text-gray-800"></i>
-        <p class="text-lg text-gray-700 mt-2"><strong>Address:</strong> Pretoria, Gauteng, South Africa <br class="text-sm"> (Getting a space soon)</p>
-    </div>
-</div>
-
 <!-- Footer -->
-<footer class="bg-white text-gray-800 p-10 mt-0">
+<footer class="bg-white text-gray-800 p-10 mt-8">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
   
   <!-- Company Info & Social (mobile horizontal only) -->
@@ -260,6 +277,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
     <!-- Logo for desktop -->
     <div class="hidden md:block">
         <img src="images/logo2.webp" alt="UnityLan Logo" class="w-[200px] max-h-full object-contain">
+        <p class="text-sm text-gray-600 mt-2">UnityLan provides innovative web development, digital marketing, and IT consulting services to help businesses thrive in the digital world.</p>        
     </div>
   
     <!-- Divider (mobile only) -->
@@ -291,7 +309,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
         <!-- Contact Info -->
         <div>
             <h3 class="text-lg font-semibold">Contact Us</h3>
-            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-600 transition">
                 Email Us
             </a>
   

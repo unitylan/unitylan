@@ -245,7 +245,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
   </div>
 
 <!-- Add On Timeline -->
-<div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12 max-w-7xl ">
+<div class=" mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-50 ">
   <div class="text-center mb-6 sm:mb-8" data-aos="fade-up" data-aos-duration="800">
     <div class="geometric-heading-container">
       <h2 class="geometric-heading">Add-On Services</h2>
@@ -256,7 +256,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
   </div>
 
   <!-- Timeline Container -->
-  <div class="relative flex flex-col md:flex-row">
+  <div class="relative flex flex-col md:flex-row  max-w-7xl mx-auto">
     <ul class="flex flex-col md:flex-row w-full relative z-10">
       <!-- Service Item -->
       <li class="relative mb-8 sm:mb-12 md:mb-0 w-full md:w-1/6 flex md:flex-col items-start md:items-center group" 
@@ -441,6 +441,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
             <td class="p-4 text-center"><i class="fas fa-xmark text-gray-700"></i></td>
             <td class="p-4 text-center"><i class="fas fa-check text-gray-700"></i></td>
           </tr>
+          <!-- Uncomment this section if you want to add a Contact Us row at the bottom
           <tr class="border-t">
             <td class="p-4 font-semibold"></td>
             <td class="p-4 text-center">
@@ -455,7 +456,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
             <td class="p-4 text-center">
               <a href="contact.html" class="inline-block bg-gray-300 text-sm px-3 py-2 rounded-lg whitespace-nowrap">Contact Us</a>
             </td>
-          </tr>          
+          </tr>  -->         
         </tbody>
       </table>
     </div>
@@ -463,17 +464,40 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="cta-section">
-  <div class="cta-container">
-      <div class="cta-text">
-          <h2 class="cta-headline">Build Fast. Launch Smarter.</h2>
-          <p class="cta-description">Level up your online presence with lightning-fast, responsive websites that wow users and drive results. Let’s build something great together.</p>
+<!-- Web Development CTA -->
+<section class="py-12 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <!-- Left Text -->
+      <div class="text-left">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Build Stunning Websites That <span class="relative inline-block">
+            Convert
+            <svg class="absolute -bottom-1 sm:-bottom-2 left-0 w-full" height="3" viewBox="0 0 200 4" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2C50 2 50 0 100 0C150 0 150 4 200 4" stroke="#3B82F6" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 mb-6">
+          From concept to launch, we design and develop websites that drive results.
+        </p>
       </div>
-      <div class="cta-buttons">
-          <a href="contact.html" class="cta-btn cta-btn-primary">Build Your Website</a>
-          <a href="portfolio.html" class="cta-btn cta-btn-secondary">View Portfolio</a>
+      <!-- Right Form -->
+      <div class="bg-blue-50 rounded-2xl p-6 sm:p-8">
+        <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Start Your Web Project</h3>
+        <form action="https://formspree.io/f/mblknrav" method="POST" class="space-y-4 cta-form" data-fbevent="Lead">
+          <input type="hidden" name="subject" value="New Web Development Lead">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <textarea name="message" placeholder="Tell us about your website idea..." rows="3" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+          <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+        </form>
       </div>
+    </div>
   </div>
 </section>
 
@@ -498,6 +522,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
     <!-- Logo for desktop -->
     <div class="hidden md:block">
         <img src="images/logo2.webp" alt="UnityLan Logo" class="w-[200px] max-h-full object-contain">
+        <p class="text-sm text-gray-600 mt-2">UnityLan provides innovative web development, digital marketing, and IT consulting services to help businesses thrive in the digital world.</p>
     </div>
   
     <!-- Divider (mobile only) -->
@@ -529,7 +554,7 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
         <!-- Contact Info -->
         <div>
             <h3 class="text-lg font-semibold">Contact Us</h3>
-            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+            <a href="mailto:info@unitylan.co.za" onclick="fbq('track', 'Contact');" class="mt-4 inline-block bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-600 transition">
                 Email Us
             </a>
   
