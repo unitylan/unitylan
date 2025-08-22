@@ -106,37 +106,42 @@ function openPopup(projectId) {
     const project = projects[projectId];
     if (!project) return;
 
-    const modalContent = document.getElementById("modalContent");
-    modalContent.innerHTML = `
-        <h2 class="text-2xl font-bold mb-2">${project.title}</h2>
-        <p class="text-gray-700 mb-4">${project.overview}</p>
+const modalContent = document.getElementById("modalContent");
+modalContent.innerHTML = `
+    <div class="p-4 sm:p-6 max-h-screen ">
+        <h2 class="text-xl sm:text-2xl font-bold mb-2">${project.title}</h2>
+        <p class="text-gray-700 mb-4 text-sm sm:text-base">${project.overview}</p>
 
-        <h3 class="font-semibold text-xl mt-4">Behind the Scenes</h3>
-        <ul class="list-disc list-inside text-left text-gray-700 mb-4">
+        <h3 class="font-semibold text-lg sm:text-xl mt-4">Behind the Scenes</h3>
+        <ul class="list-disc list-inside text-left text-gray-700 mb-4 text-sm sm:text-base">
             ${project.techStack.map(item => `<li>${item}</li>`).join("")}
         </ul>
 
-        <h3 class="font-semibold text-xl mt-4">Key Features</h3>
-        <ul class="list-disc list-inside text-gray-700 text-left mb-4">
+        <h3 class="font-semibold text-lg sm:text-xl mt-4">Key Features</h3>
+        <ul class="list-disc list-inside text-gray-700 text-left mb-4 text-sm sm:text-base">
             ${project.keyFeatures.map(item => `<li>${item}</li>`).join("")}
         </ul>
 
-        <h3 class="font-semibold text-xl mt-4">Development Process / Challenges</h3>
-        <p class="text-gray-700 text-left mb-4">${project.challenges}</p>
+        <h3 class="font-semibold text-lg sm:text-xl mt-4">Development Process / Challenges</h3>
+        <p class="text-gray-700 text-left mb-4 text-sm sm:text-base">${project.challenges}</p>
 
-        <h3 class="font-semibold mt-4">Screenshots / Demo</h3>
+        <h3 class="font-semibold text-lg sm:text-xl mt-4">Screenshots / Demo</h3>
         ${project.screenshots.map(img => `<img src="${img.src}" alt="${img.alt}" class="w-full h-auto rounded-lg mb-4">`).join("")}
-        <p>
-            ${project.links.map(link => `<a href="${link.url}" class="text-blue-600 hover:underline inline-flex items-center mr-4" target="_blank">
-            ${link.text} 
-            <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>`).join("")}
-        </p>
-        <button class="mt-4 px-8 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700" onclick="closePopup()">Close</button>
 
-    `;
+        <div class="flex flex-wrap items-center gap-2 mb-4">
+            ${project.links.map(link => `
+                <a href="${link.url}" class="text-blue-600 hover:underline inline-flex items-center mr-4" target="_blank">
+                    ${link.text}
+                    <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            `).join("")}
+        </div>
+
+        <button class="mt-4 w-full sm:w-auto px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700" onclick="closePopup()">Close</button>
+    </div>
+`;
 
     const modal = document.getElementById("projectModal");
     modal.classList.remove("hidden");
