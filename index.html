@@ -50,19 +50,43 @@ src="https://www.facebook.com/tr?id=1136462284993288&ev=PageView&noscript=1"
         <meta name="twitter:description" content="UnityLan is your trusted digital partner for web design, ecommerce, and digital marketing in Pretoria. Launch your business online with expert support and creative solutions.">
         <meta name="twitter:image" content="https://www.unitylan.co.za/images/chip82.webp"> <!-- Replace with actual image URL -->
     
-        <!-- Schema Markup (Organization) -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "UnityLan",
-          "url": "https://www.unitylan.co.za",
-          "logo": "https://www.unitylan.co.za/images/logo.png",
-          "sameAs": [
-            "https://www.instagram.com/unitylan/"
-          ]
-        }
-        </script>
+<!-- Schema Markup (Organization + Website) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "UnityLan",
+  "url": "https://www.unitylan.co.za",
+  "logo": "https://www.unitylan.co.za/images/logo.png",
+  "sameAs": [
+    "https://www.instagram.com/unitylan/",
+    "https://www.facebook.com/unitylan/",
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@unitylan.co.za",
+    "contactType": "Customer Service",
+    "areaServed": "ZA",
+    "availableLanguage": "English"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "33 Silvergrass St, Montana",
+    "addressLocality": "Pretoria",
+    "addressRegion": "Gauteng",
+    "postalCode": "0182",
+    "addressCountry": "ZA"
+  },
+  "additionalType": "https://schema.org/Website",
+  "mainEntityOfPage": "https://www.unitylan.co.za",
+  "website": {
+    "@type": "Website",
+    "name": "UnityLan",
+    "url": "https://www.unitylan.co.za"
+  },
+}
+</script>
+
     
         <!-- Favicon and Apple Touch Icon -->
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
