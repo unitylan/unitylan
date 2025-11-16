@@ -159,7 +159,7 @@ function closePopup() {
 }
 // FAQ data for Web Development
 const webDevFAQs = [
-    { question: "How long does a project take?", answer: "Project timelines vary depending on complexity. A basic website may take 4–6 weeks, while larger, custom projects can take 8–12 weeks. We provide detailed timelines before starting." },
+    { question: "How long does a project take?", answer: "Project timelines vary depending on complexity. A basic website may take 1-2 weeks, while larger, custom projects can take 4-6 weeks. We provide detailed timelines before starting." },
     { question: "Do you offer website redesign services?", answer: "Yes! If you already have a website but need improvements in design, speed, or SEO, we can revamp it while ensuring a seamless transition." },
     { question: "Do you provide ongoing maintenance?", answer: "Yes! We offer website maintenance plans to keep your site updated, secure, and running smoothly." },
     { question: "Can I request changes during the project?", answer: "Yes! We offer two major revision rounds during the design phase and another before launch. Additional changes outside the scope may require extra time and cost." },
