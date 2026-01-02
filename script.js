@@ -98,6 +98,27 @@ const projects = {
             { url: "https://fatsolelo.co.za", text: "View Live Demo" },
         ],
         //improvements: "Next, I'd add an automated email confirmation for bookings and improve accessibility features."
+    },
+    
+    lefika: {
+        title: "LefikaHearts NPC – NGO Organisation",
+        overview: "Lefika Hearts is a registered non-profit organisation dedicated to building stronger, more resilient communities through compassion, empowerment, and sustainable development.",
+        techStack: ["HTML, PHP & Tailwind CSS – for responsive, modern UI", "JavaScript – for interactivity", "Wordpress – for client managed CRM", "Social Media Integrations – allowing visitors to easily connect with the brand across social platforms"],
+        keyFeatures: [
+  "Showcase core programs like education support, food security & wellness initiatives",
+  "Highlight community upliftment and empowerment impact stories",
+  "Responsive design for mobile & desktop devices",
+  "Easy-to-use content management so the client can update content without technical help",
+  "Connect visitors with opportunities to donate, volunteer, and engage across platforms"
+],
+
+        challenges: "One of the challenges was creating a custom theme that housed the website developed in html. We focused on ensuring that the theme was a child of a main theme while still making sure it uses wordpress elements as well as html. In future we plan on intergrating a payment gateway for donrs to make donation securely and with ease.",
+        screenshots: [
+            { src: "images/lefika.webp", alt: "LefikaHeart Screenshot" }
+        ],
+        links: [
+            { url: "https://lefikahearts.org.za", text: "View Live Demo" },
+        ],
     }
 };
 
